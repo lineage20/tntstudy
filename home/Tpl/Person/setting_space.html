@@ -1,0 +1,50 @@
+   <include file="Person:header"/>
+   <include file="Person:left"/>
+   <div class="dedeMain">
+    <div class="location">空间设置 &gt; 空间资料设置</div>
+    <div class="titleTabBar bgGreen lineTB">
+      <ul>
+        <li><a href="{:U('home/Person/setting')}">分类管理</a></li>
+        <li><a href="#">书签管理</a></li>
+        <li class="select"><a href="{:U('home/Person/setting_space')}">空间设置</a></li>
+        <li><a href="{:U('home/Person/setting_info')}">会员资料</a></li>
+      </ul>
+    </div>
+    <form class="mTB10 mL10 mR10" action="edit_space_info.php" method="post" enctype="multipart/form-data" name="form1">
+      <input type="hidden" name="dopost" value="save" />
+      <div class="titleBar bgGrass lineB">
+        <div class="fLeftNoForm"><strong>空间设置</strong></div>
+        <div class="fRight titSecondary white"></div>
+      </div>
+      <table cellspacing="1" class="submit">
+        <tbody>
+          <tr>
+            <td width="15%" align="right" valign="top">空间名称：</td>
+            <td><input name="spacename" type="text" id="spacename" class="text" value="宁静致远333的空间" /><input name="pagesize" type="hidden" id="pagesize" class="text" value="10" /></td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">个人签名：</td>
+            <td><textarea name="sign" cols="50" id="sign" ></textarea>
+              少于50中文字</td>
+            </tr>
+            <tr>
+              <td align="right" valign="top">空间公告：<br>(少于250中文字)</td>
+              <td>(注：通过审核的文章不少于2篇才能够修改空间资料)<br><textarea style="width:615px;" name="spacenews" rows="10" id="spacenews"></textarea></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td height="45">&nbsp;</td>
+              <td height="45"><button class="button2" type="submit">更新</button>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+</div>
+<include file="Person:footer"/>

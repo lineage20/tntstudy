@@ -1,0 +1,14 @@
+﻿
+@font-face{
+    font-family:'Univers';
+    /*src:local('Open Sans Light'),
+        local('OpenSans-Light');*/
+    src: url('../font/Univers-LT-45-Light.eot');
+    src: url('../font/Univers-LT-45-Light.eot?#iefix') format('embedded-opentype'),
+         url('../font/Univers-LT-45-Light.woff') format('woff');      
+   }
+
+body {
+    /*font-family: "Univers";*/
+    font-family: "Myriad Set Pro","Helvetica Neue","Helvetica","Arial",sans-serif;
+}

@@ -1,0 +1,42 @@
+@charset "gb2312";
+/* CSS Document */
+.list_w960_c { width:960px;margin:0px auto; }
+.list_mt10 { margin-top:10px; }
+.list_mt20 { margin-top:20px; }
+.list_all { width:960px; background:url(../images/grey_bg.gif) repeat-y top right; margin:10px 0px 0px 0px ; float:left;}
+#list_left { width:598px; border:1px #e9e9e9 solid; padding:5px 20px 5px 20px; float:left; }
+#list_left .page-position { font-size:15px; color:#666; font-family: "Microsoft YaHei","simhei";}
+#list_left .page-position a { color:#666; }
+#list_left .page-position em { font-style:normal; padding-left:5px; padding-right:5px; }
+#list_left .page-position span { color:#F00; }
+
+/*閸ョ偓鏋冮崚妤勩€�*/
+#list_left .article-list { background:url(../images/list_split.gif) 0 0 repeat-x; padding-top:20px; clear:both;}
+#list_left .article-list a { color:#333333;}
+#list_left .article-list h2.title { height:32px; line-height:32px;  border-bottom:4px solid #44413C; margin-bottom:15px;}
+#list_left .article-list h2.title span.name { float:left; color:#333333; font-size:18px; font-family: "Microsoft YaHei","simhei";}
+#list_left .article-list h2.title span.extra { float:right; font-size:12px;}
+#list_left .article-list h2.title span.extra a { color:#666666;}
+#list_left .article-list .item { background:url(../images/list_split.gif) 0 100% repeat-x; margin-bottom:10px;}
+#list_left .article-list .item-title { height:44px; line-height:44px; color:#CC3300; font-size:20px; font-family:"鐎瑰缍�", Tahoma, Geneva, sans-serif; font-weight:normal; }
+#list_left .article-list .item-title a { color:#719d00;}
+#list_left .article-list .item-title a.sub { background:#333333; padding:2px; color:#FFFFFF; margin-right:10px;}
+#list_left .article-list .item-info { height:32px; line-height:32px; border-bottom:1px solid #E4E4E4; border-top:1px solid #E4E4E4;}
+#list_left .article-list .item-info span.time { float:left; height:32px; margin-right:12px; color:#888888;}
+#list_left .article-list .item-info span.time em { padding-left:15px; font-style:normal; color:#888888; font-family:Tahoma, Geneva, sans-serif; background:url(../images/icon.gif) 0 2px no-repeat;}
+#list_left .article-list .item-info span.comment { float:left; height:32px; color:#888888;}
+#list_left .article-list .item-info span.comment em { padding-left:15px; font-style:normal; font-family:Tahoma, Geneva, sans-serif; background:url(../images/icon.gif) 0 -48px no-repeat;}
+#list_left .article-list .item-info span.topic { float:right; height:32px; color:#888888;}
+#list_left .article-list .item-info span.topic a { text-decoration:underline;}
+#list_left .article-list .item-summary { padding:10px 0; width:100%; border-bottom:1px solid #FFFFFF; overflow:hidden;}/*閸ョ偓鏋冮崚妤勩€冪痪鎸庢蒋*/
+#list_left .article-list .item-summary .thumb { float:left; margin-right:15px;}
+#list_left .article-list .item-summary .thumb img { height:209.8px; width:240px; border:3px solid #C2C1B3;}
+#list_left .article-list .item-summary .des { line-height:1.9em; text-indent:2em; margin-bottom:0.8em; color:#555555;font-size:15px; font-family: "Microsoft YaHei","simhei";}/*閸ョ偓鏋冮崚妤勩€冪粻鈧禒瀣舵嫹*/
+#list_left .article-list .item-summary p { line-height:1.8em; text-indent:2em; margin-bottom:1em; color:#555555;}
+#list_left .article-list .item-summary .more { text-align:right;}
+#list_left .article-list .item-summary .more a { color:#333333; padding-right:30px; background:url(../images/more.gif) 100% 50% no-repeat;}
+
+#list_right { width:300px; padding:5px; float:right;}
+#list_right .rightad { width:300px; height:250px; float:left;}
+.slidebar li {float: left;margin-right: 1px;width: 20px;height: 20px;line-height: 20px;text-align: center;font-size: 10px;cursor: pointer;}
+.slidebar li.on{color:black;background:white;}

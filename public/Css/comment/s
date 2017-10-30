@@ -1,0 +1,13 @@
+document.write('<div style="display:none"><sc'+'ript src="http://s4.cnzz.com/stat.php?id=1259534405&web_id=1259534405" language="JavaS'+'cript"></scr'+'ipt></div>');
+(function() {
+    var s = "_" + Math.random().toString(36).slice(2);
+    document.write('<div id="' + s + '"></div>');
+    (window.slotbydup=window.slotbydup || []).push({
+        id: '2481792',
+        container: s,
+        size: '990,100',
+        display: 'inlay-fix'
+    });
+})();
+document.write('<script src="http://dup.baidustatic.com/js/os.js">');
+document.write('</script>');

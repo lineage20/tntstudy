@@ -1,0 +1,40 @@
+@charset "utf-8";
+/*头部搜索*/
+*{font-size:14px;}
+b{font-weight: 600;}
+.content{width:1190px;margin:0 auto;height:auto;}
+.sec .select{position: relative;padding-left:30px;margin-top:24px;border:1px solid #e0e0e0;padding-top:16px;padding:20px;padding-bottom:0;}
+.sec .select .single-line{margin-bottom:20px;position:relative;}
+.sec .select .single-line .pos-t{color:#333;font-weight:700;font-size:14px;position:absolute;top:4px;}
+.orange-bg {background-color:#f25824;color:#fff;border-radius:2px;}
+.sec .select .single-line span {margin-right:24px;padding:1px 6px;cursor:pointer;margin-bottom:10px;display:inline-block;}
+.sec .select .single-line a{color:#787878;text-decoration:none;}
+.select .single-line span.orange-bg a{color:#fff;}
+.margin-bottom0{margin-bottom:0 !important;}
+.single-line .ml32{margin-left:32px !important;position:absolute;top:4px;left:30px;}
+.sec .select .single-line .other{width:1015px;padding:0;margin:0;margin-left:60px;}
+.sec .condition{border:1px solid #e0e0e0;padding:10px;border-top:none;}
+.sec .condition .pos-t{color:#333;font-weight:700;font-size:14px;margin-left:10px;}
+.sec .condition a{margin-left:27px;padding:1px 10px;padding-left:4px;padding-right:20px;border:1px solid #e9411b;background-image:url(http://static.fangdd.com/esf/web/red-icon-dZb-HGg.png);background-repeat:no-repeat;background-position:100%;color:#787878;}
+.sec .condition a.clear{background:none;border:none;float:right;}
+/*头部搜索*/
+
+.detail{margin-top:24px;}
+
+/*搜索结果左边内容*/
+.detail_l{width:950px;height:auto;border: 1px solid #e5e5e5;}
+.detail_l .detail_single{width:950px;height:130px;border-bottom: 1px dashed #e5e5e5;clear:both;position:relative;}
+.detail_l .detail_title{padding:20px;border-bottom: 1px solid #e5e5e5;font-weight:400;font-size:14px;}
+.detail_l .detail_title i{color: #f25824!important;font-size:22px;font-weight:700;}
+.detail_l .detail_single img{width:120px;height:90px;float:left;margin:20px;margin-left:40px;border:1px solid #e0e0e0;}
+.detail_l .detail_single span{width:600px;display:block;float:left;color: #787878;font-size:13px;    margin-top: -8px;}
+.detail_l .detail_single span.title{margin:5px;color:#1D50A3;margin-top:20px;margin-left:0;font-size:18px;margin-bottom:18px;}
+/*搜索结果左边内容*/
+
+/*搜索结果右边内容*/
+.searchbiz_right{width: 220px; float: right;margin-bottom: 40px;}
+.detail_r{width:100%;}
+/*搜索结果右边内容*/
+
+#other_detail{position:absolute;right:6px;top:10px;}
+#other_detail p{color:#787878;font-size:13px;}

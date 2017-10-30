@@ -1,0 +1,14 @@
+
+
+.title {font-size:14pt; color:#000000; font-family:sans-serif,verdana,helvetica;}
+.copyright {font-size:10pt; color:#000000; font-family:sans-serif,verdana,helvetica;}
+.para {text-indent:22pt;}
+.note {font-size:11pt; border:3px double #000000; padding:12pt; margin:12pt;}
+
+
+#nav {float:left; width:690px; margin-left:335px; margin-top:15px; color:#FFF;}
+#nav a {text-decoration:none; color:#fff; font-weight:bold; font-size:13px; padding:2px 5px;}
+#nav a:link {color:#fff; font-weight:bold; font-size:13px; padding:2px 8px;}
+#nav a:hover {background: #CCD8E6; color:#000; padding:2px 8px;}
+#nav a:visited {font-size:13px; font-weight:bold; padding:2px 8px;}
+#nav a:active {font-size:13px; font-weight:bold; padding:2px 8px;}

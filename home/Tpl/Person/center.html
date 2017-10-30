@@ -1,0 +1,107 @@
+ <div class="dedeCenter" id="personal">
+   <!--个人信息 -->
+   <div class="message">
+     <!-- <div class="visualize fLeft">
+      <img class="mB10" src="http://qzapp.qlogo.cn/qzapp/222758/8DA3FAF978E3A4CD2E581556D1C1FCD0/50" width="150" height="150" alt="您的形象" />
+      <ul class="black">
+       <li><a class="icon upImage" href="edit_face.php" title="更改个人头像">更改头像</a></li>
+       <li><a class="icon mySetting" href="{:U('home/Person/setting_pe_info')}" title="设置个人资料">个人资料</a></li>
+     </ul>
+     <div class="clear"></div>
+   </div> -->
+   <div class="datum fLeft mT10">
+     <div class="clear"></div>
+     <div>
+      <div><P><h3 class="userName">您可以在本网站:</h3><BR>
+      </P>
+      1.发表技术文章，如HTML、JavaScript、jQuery、MySQL、PHP、Linux等。
+      <BR>
+        <BR>
+          2.其他新增功能后续跟进，具体发布信息查看首页公告栏。
+ <!--  1. 发表原创文章，心情日记，连载小说，推荐网络美文，与大家分享、交流。
+  <BR>
+  2. 加入编辑团队，审核他人发表的文章，<a href="{:U('home/Person/editor_apply')}"><u>点击申请编辑权限</u></a>。
+  <BR>
+  3. 简短话题交流，请进<a href="#"><u>论坛发帖讨论</u></a>。
+  <BR><font color="red">New!</font> <a href="#" target="_blank"><u>文章赞赏功能开启!</u></a> -->
+    <BR></div>
+    </div>
+    <div class="clear"></div>
+
+<!-- <div class='tip'>
+ <div class='tipClose fRight'>隐藏提示</div>
+ <div class='tipContent fLeft icon titTip'>您的空间信息不完整！<a href="{:U('home/Person/setting_space')}">[填写空间资料]</a></div>
+ <br class='clear' />
+</div> --> </div>
+</div>
+<div class="titleBar bgGreen lineB">
+ <h5 class="fLeft icon titFangle">最新文章推荐</h5>
+ <div class="clear"></div>
+</div>
+<div class="fangle">
+ <dl class="artList mL10 mR10">
+   <volist name="info" id="vo">
+    <dd> <em><!-- <a class="yellow" href="index.php?uid=%C1%FA%CD%A5%CA%A2%CA%C0" target="_blank"> -->
+    <a class="yellow">{$vo['author']}</a><!-- </a> -->{$vo['createtime']}</em> <span><a href="{:U('home/Index/index_search',array('id'=>$vo['id'],'type'=>$vo['type']))}" title="{$vo['subject']}" target="_blank">{$vo['subject']}</a></span> </dd>
+  </volist>
+</dl>
+</div>
+<!-- //论坛热帖 -->
+<div class="titleBar bgGreen lineB">
+ <h5 class="fLeft icon titFangle">热门文章</h5>
+ <div class="clear"></div>
+</div>
+<div class="fangle">
+  <dl class="artList mL10 mR10">
+   <volist name="num" id="vo">
+    <dd><em><!-- <a class="yellow" href="http://bbs.duwenzhang.com/home.php?mod=space&amp;uid=265941" target="_blank"> --><a class="yellow">{$vo['author']}</a><!-- </a> --></em><span><a href="{:U('home/Index/index_search',array('id'=>$vo['id'],'type'=>$vo['type']))}" title="{$vo['subject']}" target="_blank">{$vo['subject']}</a></span>
+    </dd>
+  </volist>
+</dl>
+</div>
+<!-- //谁来看过我 -->
+<div class="whoSeeMe">
+ <div class="titleBar bgGreen lineB">
+  <!--  <h5 class="fLeft icon titWhoSeeMe">谁来看过我</h5> -->
+</div>
+<ul class="picList textCenter">
+</ul>
+<div class="clear"></div>
+<!-- //我的收藏夹 -->
+<div class="titleBar bgGreen lineB">
+  <!--  <h5 class="fLeft icon titStow"> <a href="{:U('home/Person/collect')}"><u>我的收藏</u></a> <a href="{:U('home/Person/howcollect')}" title="如何收藏?" target="_blank">(?)</a> </h5> -->
+  <!-- <div class="fRight"><a href="{:U('home/Person/collect')}"><u>管理</u></a></div> -->
+  <div class="clear"></div>
+</div>
+<div class="Stow">
+  <dl class="artList mL10 mR10">
+  </dl>
+</div>
+<div class="titleBar bgGreen lineB">
+  <!--  <h5 class="fLeft icon titFangle">最新收到的评论</h5> -->
+  <div class="clear"></div>
+</div>
+<style>
+  .dede_comment{ padding-bottom:6px;word-wrap:break-word; width:647px; }
+  .dede_comment .decmt-box{ width:98%; padding:6px 5px 8px; margin:0px auto; border-bottom:1px solid #E5E5E5; overflow:hidden; clear:both; }
+  .dede_comment .decmt-box .decmt-title{ line-height:19px; color:#999; font-family:Tahoma; }
+  .dede_comment .decmt-box .decmt-title span{ margin-right:2px; vertical-align:middle; }
+  .dede_comment .decmt-box .decmt-title .moodico{ height:18px; width:18px; display:inline-block; }
+  .dede_comment .decmt-box .decmt-title .username{ color:#669; }
+  .dede_comment .decmt-box .decmt-title .username a{ color:#669; }
+  .dede_comment .decmt-box .decmt-title .username a:hover{ text-decoration:none; color:#690; }
+  .dede_comment .decmt-box .decmt-content{ color:#555; line-height:21px; clear:both; width:99%; margin:2px auto 0px; }
+  .dede_comment .decmt-box .decmt-box{background:#FFE; border:1px solid #CCC; margin:6px auto;}
+  .dede_comment .decmt-box .decmt-box .decmt-title{text-indent:4px;}
+  .dede_comment .decmt-box .decmt-box .decmt-content{color:#666;}
+</style>
+
+<div class="Stow dede_comment">
+ <dl class="artList mL10 mR10">
+  <dt>&nbsp;</dt>
+</dl>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>

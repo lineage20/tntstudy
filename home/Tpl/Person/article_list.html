@@ -1,0 +1,96 @@
+  <include file="Person:header"/>
+  <include file="Person:left"/>
+  <div class="dedeMain">
+    <div class="location"><span class="fLeft">已发布普通文章</span><span class="fRight mR10 titPublish icon"><a href="{:U('home/Person/article_add')}">发表新文档</a></span></div>
+<!--   <div class="titleBar bgGreen lineTB">
+  <form name='form3' action='content_list.php' method='get'>
+  <div class="fLeft" style="margin-top:3px">
+  <input type='hidden' name='dopost' value='listArchives' />
+  <input type='hidden' name='channelid' value='1'>
+  关键字：
+  <input class="text" type='text' name='keyword' value='' style='width:140px' />
+  <button class="button2" type="submit">提交</button> 当天发表的文章会在第二天被审核,逾期未审核可给QQ<font color="#FF0000">760993302</font>留言查询,<a href="http://www.duwenzhang.com/fabiaoshuoming.html" target="_blank"><u><font color="#FF0000">查看审核标准</font></u></a>
+  </div>
+  <div class="fRight" style="padding-right:10px"><select  name='mtypesid' onchange='location.href=this.value' size='1'>
+<option value='0'>请选择分类...</option>
+<option value='content_list.php?channelid=1'>所有文章</option>
+</select>  </div>
+  </form>
+</div> -->
+<form name="form2" class="mL10 mR10 mTB10">
+  <div class="titleBar bgGrass lineB mB10">
+    <div class="fLeft"><strong>我发表的文章： | <a href="{:U('home/Person/article_add')}"><u>点击发表新文章</u></a> |<!--  <a href="http://www.duwenzhang.com/member/edit_dashang.php"><u>赞赏设置</u></a>(<font color="red">new!</font>) --> </strong></div>
+  </div>
+  <div class='msg'>
+   <div class='tipContent fLeft icon titTip'>您有<font color='red'>1条未读短消息</font>！<a href="{:U('home/Person/message')}">[点击查看]</a></div><br />
+   <br class='clear' />
+ </div>  <table cellspacing="1" class="list">
+ <thead>
+  <tr>
+    <th width="8%" align="center">文章标题</th>
+  <!--   <th width="8%" align="center">编辑信息</th> -->
+    <!--   <th width="10%" align="center"><span title="编辑平均评分，6分合格，10分满分,评分多少仅做参考。诗歌类暂无评分功能。">参考得分(?)</span></th> -->
+    <th width="8%" align="center">类目 </th>
+    <th width="8%" align="center">审核状态</th>
+    <th width="5%">点击次数 </th>
+    <th width="9%" align="center">发布时间 </th>
+    <th width="9%" align="center">操作</th>
+  </tr>
+</thead>
+<tbody>
+  <volist name="info" id="vo">
+    <tr>
+      <?php if($vo['review']==1){?>
+      <td><span class="titDot icon16 fLeft"></span><a href='http://www.duwenzhang.com/plus/view.php?aid=354670' target='_blank'><?php echo $vo['subject'];?></a>
+        <?php }else{?>
+        <td><span class="titDot icon16 fLeft"></span><?php echo $vo['subject'];?>
+          <?php }?>
+          <!-- -->
+        </td>
+<!-- 
+        <td align="center" ><div style="overflow: hidden; /*自动隐藏文字*/
+text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+white-space: nowrap;/*强制不换行*/
+width: 20em;/*不允许出现半汉字截断*/
+color:#6699ff;border:1px #ff8000 dashed;"> {$vo['message']} </div></td> -->
+        <!--   <td align="center">无</td> -->
+        <td align="center">
+          {$vo['type']}</td>
+          <?php if($vo['review']==1){?>
+          <td align="center">通过审核</font></td>
+          <?php }elseif($vo['review']==2){?>
+          <td align="center"><font color='red'>正在审核</font></td>
+          <?php }elseif($vo['review']==0){?>
+           <td align="center"><font color='red'>审核失败</font></td>
+           <?php }else{?>
+           <td align="center"><font color='red'>积分不足</font></td>
+           <?php }?>
+          <td align="center">{$vo['number']}</td>
+          <td>{$vo['createtime']}</td>
+          <td align="center">
+            <a href="{:U('home/Person/article_del',array('id'=>$vo['id']))}" onclick="return confirm('你确定选中的文章删除吗？')">删除</a>|
+            <a href="{:U('home/Person/article_top',array('id'=>$vo['id']))}" onclick="return confirm('你确定选中的文章要置顶吗？将要扣除40个积分')">置顶</a></td>
+
+          </tr>
+        </volist>
+      </tbody>
+    <!--   <tfoot>
+        <tr>
+          <td colspan="8"><div class="pages mTB10 fRight"></div>
+        </td>
+      </tr>
+    </tfoot> -->
+  </table>
+</form>
+<div class="pages" style="margin:20px 150px;">
+<div class="pagelistbox">
+            {$page}
+          </div>
+        </div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<include file="Person:footer"/>

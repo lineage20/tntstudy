@@ -1,0 +1,48 @@
+<div class="wrapper lineT">
+ <div class="mainBox">
+   <div class="main">
+     <script language='javascript'>
+      function ShowHideMenuD(mid)
+      {
+        if($("#"+mid).css("display") == 'block') {
+          $("#"+mid).hide(200);
+        }
+        else {
+          $("#"+mid).show(200);
+        }
+      }
+    </script>
+    <div class="dedeLeft">
+     <div class='allmenu'>
+      <!-- <a href="{:U('home/Person/editor_apply')}"><font color="red"><strong><u>编辑团队邀您加入！</u></strong></font></a> -->
+      <!-- //内容管理 -->
+      <div class='menuTitle mbccontent' onclick="ShowHideMenuD('mbccontent')"></div>
+      <ul class="leftNav" id="mbccontent">
+        <li class="icon article"><a href="{:U('home/Person/article_list')}" title="文章管理">文章列表</a><em class="black"><!-- <a href="{:U('home/Person/article_add')}" title="发表新文章">发表&raquo;</a> --></em></li>
+        <li class="icon article"><a href="{:U('home/Person/article_add')}" title="文章管理">发表文章</a><em class="black"><!-- <a href="{:U('home/Person/article_add')}" title="发表新文章">发表&raquo;</a> --></em></li>
+          <li class="icon article"><a href="{:U('home/Person/user_points')}" title="文章管理">积分详情</a><em class="black"></em></li>
+      <!--   <li class="icon article"><a href="{:U('home/Person/mybook')}" title="连载小说管理">连载小说</a><em class="black"><a href="{:U('home/Person/mybook')}" title="发表小说">发表&raquo;</a></em></li>
+        <li class="icon article"><a href="{:U('home/Space/index')}" target="_blank" title="个人文集空间">我的空间</a></li>
+        <li class="icon article"><a href="http://bbs.duwenzhang.com/home.php?mod=space&do=thread&view=me&from=space" target="_blank" title="我的论坛帖子">我的帖子</a></li> -->
+      </ul>
+      <!-- //征文比赛 -->
+      <!--     <div class='menuTitle zwccontent' onclick="ShowHideMenuD('zwccontent')"></div> -->
+      <!--     <ul class="leftNav" id="zwccontent"> -->
+
+        <!--    <li class="icon ask"><a href="/member/zhengwen.php" title="查看状态">七夕征文</a></li>
+        <!--    <li class="icon ask"><a href="/member/content_match_pingshen.php?matchid=1&round=3" title="参与评审">我要评审</a></li> -->
+        <!--    <li class="icon ask"><a href="/member/zhengwen_chaxun.php" title="查询我的参赛状态">参赛查询</a></li> -->
+        <!--    <li class="icon ask"><a href="/member/match_shenhe_info.php" title="我的评审历史">评审历史</a></li> -->
+
+        <!-- //资料设置 -->
+        <!-- <div class='menuTitle mbcconfig' onclick="ShowHideMenuD('mbcconfig')"></div> -->
+        <ul class="leftNav" id="mbcconfig">
+         <!--  <li class="icon myinfo"><a href="{:U('home/Person/setting_pe_info')}">个人资料</a></li> -->
+          <!-- <li class="icon myconfig"><a href="{:U('home/Person/setting')}">空间管理</a></li> -->
+        </ul>
+    <!-- <hr width="94%" class="dotted" />
+    <button class="button5 mTB10" onclick="location='{:U('home/Person/setting_space')}';">空间设置</button>
+    <hr width="94%" class="dotted" /> -->
+    <!--div class="lineB"></div-->
+  </div>
+</div>

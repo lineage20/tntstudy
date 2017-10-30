@@ -1,0 +1,18 @@
+location / {
+	index  index.php;
+    if (!-e $request_filename) {
+        #rewrite ^(.*)$ /index.php?s=$1 last;
+		rewrite ^(.*)login$ index.php/api/login/index/(.*)$2 last;  
+		rewrite ^(.*)ping$ index.php/api/ping/index/(.*)$2 last;  
+		rewrite ^(.*)auth$ index.php/api/auth/index/(.*)$2 last;  
+		rewrite ^(.*)portal$ index.php/api/user/index/(.*)$2 last;  
+		rewrite ^library/test/success.html index.php/api/login/apple last;  
+		rewrite ^(.*)weixin$   /index.php/api/login/weixin/(.*)$2 last;  
+		rewrite ^(.*)dladmin$   /index.php/index/index/alog/(.*)$2 last;  
+		rewrite ^(.*)ptadmin$   /index.php/wifiadmin/login/index/(.*)$2 last;
+		#rewrite ^daililogin(.*)$   /index.php/index/index/alog/(.*)$ last;
+		#rewrite ^adminlogin(.*)$   /index.php/wifiadmin/login/index/(.*)$ last;		
+		#try_files $uri $uri/ /index.php$request_uri;  
+        break;
+    }
+}

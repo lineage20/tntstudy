@@ -1,0 +1,56 @@
+ <include file="Person:header"/>
+ <include file="Person:left"/>
+ <div class="dedeMain">
+  <div class="location">
+    <div class="fLeft">发件箱</div>
+  </div>
+  <div class="titleTabBar bgGreen lineTB">
+    <ul id="pm">
+      <li><a href="{:U('home/Person/writemsg')}">写新消息</a></li>
+      <li ><a href="{:U('home/Person/message')}">收件箱</a></li>
+      <li class="select"><a href="{:U('home/Person/showmsg')}">发件箱</a></li>
+      <li ><a href="{:U('home/Person/gomsg')}">已发出信息</a></li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+  <form class="mTB10 mL10 mR10" action="pm.php" method="post" name="form1">
+    <input type='hidden' name='dopost' value='del' />
+    <table cellspacing="1" class="list">
+      <thead>
+        <tr>
+          <th style="width:60px;">序号</th>
+          <th style="width:100px;">标题</th>
+          <th >内容</th>
+          <th style="width:100px;">收件人</th>
+          <th style="width:100px;">发布时间 </th>
+          <th style="width:60px;">操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <volist name="info" id="vo">
+          <tr style="text-align:center;">
+            <td>{$key+1}</td>
+            <td>{$vo['title']}</td>
+            <td>{$vo['content']}</td>
+            <td>{$vo['author']}</td>
+            <td>{$vo['time']}</td>
+            <td><a href="{:U('home/Person/message_del',array('id'=>$vo['id']))}">删除</a></td>
+          </tr>
+
+        </volist>
+      </tbody>
+      
+   
+  </table>
+  <div class="pages" style="margin:20px 150px;"><div class="pagelistbox">
+            {$page}
+          </div>
+        </div>
+</form>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<include file="Person:footer"/>

@@ -1,0 +1,120 @@
+ <include file="Person:header"/>
+ <include file="Person:left"/>
+ <div class="dedeMain">
+  <div class="location">设置基本资料</div>
+  <div class="titleTabBar bgGreen lineTB">
+   <ul>
+     <li class="select"><a href="{:U('home/Person/setting_info')}">基本资料</a></li>
+     <li><a href="{:U('home/Person/setting_pe_info')}">个人资料</a></li>
+     <!-- <li><a href="{:U('home/Person/setting_space')}">空间设置</a></li> -->
+   </ul>
+ </div>
+ <form class="mTB10 mL10 mR10" name="form2" action="edit_baseinfo.php" method="post" onsubmit="return checkSubmit();">
+   <input type="hidden" name="dopost" value="save" />
+   <div class="titleBar bgGrass lineB">
+     <div class="fLeftNoForm"><strong>基本资料</strong></div>
+     <div class="fRight titSecondary white" style="margin-top:5px;"></div>
+   </div>
+   <table cellspacing="1" class="submit">
+     <tbody>
+      <tr>
+       <td width="15%" align="right" valign="top">帐号类型：</td>
+       <td>个人</td>
+     </tr>
+     <tr>
+       <td align="right" valign="top">用户名：</td>
+       <td>宁静致远333<input name="uname" type="hidden" id="uname" size="20" class="text" value="宁静致远333"/></td>
+     </tr>
+     <tr>
+       <td align="right" valign="top"><span class="tdl">原登陆密码：</span></td>
+       <td>使用QQ登录无初始密码<input name="oldpwd" type="hidden"  value="1" />   <span style="color:red;">*</span></td>
+     </tr>
+     <tr>
+       <td align="right" valign="top"><span class="tdl">新密码：</span></td>
+       <td><input name="userpwd" type="password" id="userpwd" size="20" class="text" />
+         <span id="_userpwdok">(不修改密码请保留此项为空)</span></td>
+       </tr>
+       <tr>
+         <td align="right" valign="top">确认新密码：</td>
+         <td><span class="tdr">
+           <input name="userpwdok" type="password" id="userpwdok" value="" size="20" class="text" />
+           <span id="_userpwdok2">(不修改密码请保留此项为空)</span> </span></td>
+         </tr>
+         <tr>
+           <td align="right" valign="top"><span class="tdl">原安全问题：</span></td>
+           <td><span class="tdr">
+             <select name='safequestion' id='safequestion'><option value='0' selected>没安全提示问题</option>
+              <option value='1'>你最喜欢的格言什么？</option>
+              <option value='2'>你家乡的名称是什么？</option>
+              <option value='3'>你读的小学叫什么？</option>
+              <option value='4'>你的父亲叫什么名字？</option>
+              <option value='5'>你的母亲叫什么名字？</option>
+              <option value='6'>你最喜欢的偶像是谁？</option>
+              <option value='7'>你最喜欢的歌曲是什么？</option>
+            </select>
+            <span id="_safequestion">(忘记密码时重设密码用)</span> </span></td>
+          </tr>
+          <tr>
+           <td align="right" valign="top"><span class="tdl">原问题答案：</span></td>
+           <td><span class="tdr">
+             <input name="safeanswer" type="text" id="safeanswer" class="text" value="" />
+           </span></td>
+         </tr>
+         <tr>
+           <td align="right" valign="top"><span class="tdl">新安全问题：</span></td>
+           <td><span class="tdr">
+             <select name='newsafequestion' id='newsafequestion'><option value='0' selected>没安全提示问题</option>
+              <option value='1'>你最喜欢的格言什么？</option>
+              <option value='2'>你家乡的名称是什么？</option>
+              <option value='3'>你读的小学叫什么？</option>
+              <option value='4'>你的父亲叫什么名字？</option>
+              <option value='5'>你的母亲叫什么名字？</option>
+              <option value='6'>你最喜欢的偶像是谁？</option>
+              <option value='7'>你最喜欢的歌曲是什么？</option>
+            </select>
+            <span id="_safequestionnew">(不修改不用填写)</span> </span></td>
+          </tr>
+          <tr>
+           <td align="right" valign="top"><span class="tdl">新问题答案：</span></td>
+           <td><span class="tdr">
+             <input name="newsafeanswer" type="text" id="newsafeanswer" class="text" value="" />
+           </span></td>
+         </tr>
+         <tr>
+           <td align="right" valign="top"><span class="tdl">电子邮箱：</span></td>
+           <td><span class="tdr">
+             <input name="email" type="text" id="email" class="text" value="441380237@qq.com" />
+             * <span id="_email">(忘记密码时重设密码用)</span> </span></td>
+           </tr>
+           <tr>
+             <td align="right" valign="top"><span class="tdl">性别： </span></td>
+             <td><span class="tdr">
+               <input type="radio" name="sex" value="男" />
+               男 &nbsp;
+               <input type="radio" name="sex" value="女" />
+               女 &nbsp;
+               <input type="radio" name="sex" value="保密" />
+               保密 </span></td>
+             </tr>
+             <tr>
+               <td align="right" valign="top"><span class="tdl">验证码：</span></td>
+               <td><input name="vdcode" type="text" id="vdcode" style='width:50px;text-transform:uppercase;' class="text" />
+                 <img src='../include/vdimgck.php' width='50' height='20' align="absmiddle" /></td>
+               </tr>
+             </tbody>
+             <tfoot>
+              <tr>
+               <td height="45">&nbsp;</td>
+               <td height="45"><button class="button2" type="submit">更新</button>
+               </td>
+             </tr>
+           </tfoot>
+         </table>
+       </form>
+     </div>
+     <div class="clear"></div>
+   </div>
+   <div class="clear"></div>
+ </div>
+</div>
+<include file="Person:footer"/>

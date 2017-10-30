@@ -1,0 +1,55 @@
+<include file="Space:header" />
+<div class="wrapper mT10">
+  <div class="west">
+    <!-- //begin icon -->
+    <dl class="border">
+     <dt class="caption"><strong>个人资料</strong></dt>
+     <dd class="body" id="userInfo"> <a class="pic" href="index.php?uid=%C4%FE%BE%B2%D6%C2%D4%B6333&action=infos" title="我的资料"> <img src="__PUBLIC__/Images/space/006.gif" alt="宁静致远333的头像" /> </a>
+      <div class="textCenter dashed pB10">
+       <h4 class="mT5 mB10">宁静致远333</h4>
+       <ul class="w50 buttonBlue grayA">
+        <li class="mB5"><a href="{:U('home/Space/word')}"><span>给我留言</span></a></li>
+        <li class="mB5"><a href="{:U('home/Person/writemsg')}"><span>发送消息</span></a></li>
+        <li><a href="index.php?action=newfriend&uid=宁静致远333"><span>加为好友</span></a></li>
+        <li><a href="index.php?action=blackfriend&uid=宁静致远333"><span>加黑名单</span></a></li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </dd>
+</dl>
+<!-- //end icon --><!-- //spacenews -->
+<dl class="border mT10">
+  <dt class="caption"><strong>空间公告</strong>
+    <span style="float:right;"><a href="/member/edit_space_info.php">(修改)</a>&nbsp;&nbsp;</span></dt>
+    <dd class="body lh20 pB10">
+    </dd>
+  </dl><!-- //最近访客 -->  </div>
+  <div class="east">
+    <dl class="border">
+      <dt class="caption"><strong>留言</strong></dt>
+      <dd class="body pB10">         <div class="fRight mTB10 pd10"><span>共 0 页/0条记录</span></div>
+        <div class="clearfix"></div>
+      </dd>
+    </dl>
+    <dl class="border mT10">
+      <dt class="caption"><strong>给我留言</strong></dt>
+      <dd class="body pB10">
+        <form action="index.php" name="form1" method="post" class="f14">
+          <input type="hidden" name="action" value="guestbooksave" />
+          <input type="hidden" name="uidnum" value="317469" />
+          <input type="hidden" name="uid" value="宁静致远333" />
+          标题：<br /><input name="title" type="text" id="title" class="ip" style="width:250px;height:15px;" value="关于文章《》" /><br />
+          内容：<br /><textarea name="msg" id="msg" style="width:98%; height:120px;" class="clear mB10 text"></textarea>
+          <button class="fRight button buttonBlue2" type="submit">提交</button>
+          <label>会员名：</label>
+          <input name="uname" type="text" id="uname" value="宁静致远333" class="text" style="width:100px;" />
+          <label>验证码：</label>
+          <input name="vdcode" type="text" class="text" id="vdcode" style="width:50px;text-transform:uppercase;" />
+          <img src='../include/vdimgck.php' width='50' height='20' align="absmiddle" /><a href="resetpassword.php" class="mL10 mR5">找回密码</a><a href="../member/index_do.php?fmdo=user&dopost=regnew" title="注册">注册</a>
+        </form>
+        <p class="mp10 aGray">游客无法发表留言，会员登陆后可以留言。</p>
+      </dd>
+    </dl>
+  </div>
+</div>
+<include file="Space:footer" />

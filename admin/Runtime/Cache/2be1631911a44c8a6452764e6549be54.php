@@ -1,0 +1,266 @@
+<?php if (!defined('THINK_PATH')) exit(); include('./admin/Tpl/inc/header.php') ; ?>
+<?php include('./admin/Tpl/inc/jsreference.php'); ?>
+
+<table id="tbList"></table>
+
+<div style="display:none;">
+    <div id="tb" style="height:auto;padding:10px;">
+
+        <?php foreach($data as $vo):?>
+            <?php echo $vo;?>
+        <?php endforeach;?>
+        <!-- <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add'" id="btnAdd">新增</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" id="btnEdit">编辑</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" id="btnDel">删除</a> -->
+
+    </div>
+
+    <div id="dialogAdd">
+        <ul class="ulform">
+            <li>
+                <label>角色名称</label>
+                <input id="txtName" type="text" style="width: 189px" />
+            </li>
+            <li>
+                <label>备注</label>
+                <textarea id="txtRemark"></textarea>
+            </li>
+            <li>
+                <div class="easyui-panel" title="权限设置" style="width:350px;height:280px;padding:10px;">
+                    <ul id="treePms" class="easyui-tree" data-options="url:'/admin.php/pms/functions_ddl',method:'get',animate:true,checkbox:true,lines:true"></ul>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+    <script type="text/javascript">
+        var dg;
+
+        $(function ()
+        {
+            dg = new FCore.DataGrid("tbList", loadData);
+
+            dg.options.columns = [[
+                 { field: 'fid', title: 'Id',hidden:true,  width: 50 },
+                 { field: 'fname', title: '角色名称', width: 100 },
+                 { field: 'fremark', title: '备注', width: 300 }
+                 
+            ]];
+            dg.options.pageSize = 30;
+            dg.options.title = "";
+            dg.options.toolbar = "#tb";
+
+            dg.init();
+            dg.load();
+
+            $("#btnAdd").click(btnAdd_Click);
+            $("#btnEdit").click(btnEdit_Click);
+            $("#btnDel").click(btnDel_Click);
+
+        });
+
+        function loadData(idx)
+        {
+            var parms = {
+                PageIndex: idx || dg.getPageIndex(),
+                PageSize: dg.getPageSize()
+            };
+
+            FCore.Ajax.Post("/admin.php/pms/roles_getlist", parms, function (data)
+            {
+                dg.update(data);
+            });
+        }
+
+
+        function btnAdd_Click()
+        {
+            openAddDialog("add");
+        }
+
+        function btnEdit_Click()
+        {
+            openAddDialog("edit");
+        }
+
+        function openAddDialog(type)
+        {
+            var sel, title;
+            $("#txtName,#txtRemark").val("");
+
+            title = "新增";
+            
+            //清除所有选中项
+            $.each($('#treePms').tree('getChecked'), function (i, e)
+            {
+                $('#treePms').tree('uncheck', $('#treePms').tree('find', e.id).target);
+            });
+            
+            if (type == "edit")
+            {
+                sel = dg.getSelected();
+                if (!sel)
+                {
+                    jQuery.messager.alert('提示:','请选择要编辑的行!','info'); 
+                    return;
+                }
+                title = "编辑";
+
+                $("#txtName").val(sel.fname);
+                $("#txtRemark").val(sel.fremark);
+
+
+                FCore.Ajax.Post("/admin.php/pms/roles_GetPmsByRoleId/id/" + sel.fid, { fid: sel.fid }, function (d)
+                {
+
+
+                    $.each(d, function (i, e)
+                    {
+                        $('#treePms').tree('check', $('#treePms').tree('find', e.id).target);
+                    });
+                });
+
+            }
+
+
+            $("#dialogAdd").dialog({
+                //closed: true,
+                iconCls: "icon-" + type,
+                modal: true,
+                resizable: true,
+                title: title,
+                width: 400,//document.documentElement.clientWidth,
+                height: 500,//document.documentElement.clientHeight,
+                buttons: [{
+                    text: "确定",
+                    iconCls: 'icon-ok',
+                    handler: function ()
+                    {
+                        //确定 按钮事件
+
+                        //收集提交数据
+
+                        var parms = {
+                            fid: type == "edit" ? sel.fid : 0,
+                            fname: $("#txtName").val(),
+                            fremark: $("#txtRemark").val(),
+                            pms: $('#treePms').tree('getChecked',['checked','indeterminate'])
+                        };
+
+                        // console.log(JSON.stringify(parms));
+
+                        parms.pms = GetId(parms.pms).join();
+
+                        //var obj = new Object;
+                        //for (var i = 0; i < parms.Pms.length; i++)
+                        //{
+                        //    obj[i] = parms.Pms[i];
+                        //}
+                        //parms.Pms = obj;
+
+                        // console.log(JSON.stringify(parms));
+                        if (!parms.fname)
+                        {
+                            jQuery.messager.alert('提示:','请输入角色名称!','info'); 
+                            return false;
+                        }
+
+                        FCore.Ajax.Post("/admin.php/pms/roles_save", parms, function (d)
+                        {
+                            if (d.Ok)
+                            {
+                                $("#dialogAdd").dialog("close");
+                                loadData();
+                            }
+                            else
+                            {
+                                jQuery.messager.alert('提示:',d.Msg,'info'); 
+                            }
+
+                        });
+
+
+                    }
+                }, {
+                    text: "取消", iconCls: 'icon-cancel',
+                    handler: function ()
+                    {
+                        //取消 按钮事件
+                        $("#dialogAdd").dialog("close");
+                    }
+                }]
+
+            });
+
+        }
+
+
+        function GetId(node)
+        {
+            var ids = [];
+
+            if (node)
+            {
+                $.each(node, function (i, e)
+                {
+                    console.log(3);
+                    ids.push(e.id);
+                    if (e.children)
+                    {
+                        ids.concat(GetId(e.children))
+                    }
+                });
+            }
+            return ids;
+        }
+
+
+
+
+        function btnDel_Click()
+        {
+            var parms = dg.getSelected();
+            if (parms)
+            {
+                $.messager.confirm("删除", "确定要删除吗？", function (r)
+                {
+                    if (r)
+                    {
+                        FCore.Ajax.Post("/admin.php/pms/roles_delete/id/" + parms.fid, null, function (d)
+                        {
+                            if (d.Ok)
+                            {
+                                loadData();
+                            }
+                            else
+                            {
+                                FCore.Alert.Error(d.Msg);
+                            }
+                        });
+                    }
+
+                });
+
+            }
+            else
+            {
+                $.messager.alert('提示', '请选择删除的行!', 'info')
+            }
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+<?php include('./Tpl/inc/footer.php'); ?>

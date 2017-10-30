@@ -1,0 +1,85 @@
+﻿
+        .items {
+            background: #fff;
+            padding: 30px;
+            width: 1140px;
+            font-size:18px;
+        }
+
+            .items > img {
+                display: block;
+                max-width: 100%;
+            }
+
+            .items > .title {
+                text-indent: unset;
+                background: #b31c3c;
+                margin: 30px 0 20px;
+            }
+                .items > .title > div {
+                    background: #434142;
+                    color: #fff;
+                    display: inline-block;
+                    padding-left: 20px;
+                    height: 35px;
+                }
+
+
+                .items > .title>div > i {
+                    margin-right: 5px;
+                    font-size: 20px;
+                }
+                    .items > .title > div > u {
+                        display: inline-block;
+                        height: 35px;
+                        font-size: 18px;
+                    }
+
+                    .items > .title > div > em {
+                        background-image: url("../img/products/title-split.png");
+                        display: inline-block;
+                        width: 35px;
+                        height: 35px;
+                        vertical-align: top;
+                        margin-left:30px
+                    }
+
+
+
+        .params {
+            border-collapse: collapse;
+            border: 0px none;
+            width: 80%;
+            margin: auto;
+        }
+
+            .params th, .params td {
+                border: 1px solid #CCC;
+                padding: 8px 10px;
+            }
+
+            .params th {
+                border-left: 0px none;
+                font-weight: unset;
+                text-align: left;
+                width: 200px;
+            }
+
+            .params td {
+                border-right: 0;
+            }
+
+        .items .txt {
+            margin: 50px auto 20px;
+            width: 80%;
+        }
+
+            .items .txt > h1 {
+                font-weight: unset;
+                text-align: center;
+                padding: 10px 0px;
+            }
+
+            .items .txt > p {
+                padding-top: 10px;
+            }

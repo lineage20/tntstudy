@@ -1,0 +1,38 @@
+ <include file="Person:header"/>
+ <include file="Person:left"/>
+   <div class="dedeMain">
+    <div class="location">我的收藏</div>
+    <div class="titleTabBar bgGreen lineTB">
+      <ul>
+       <li class="select"><a href="{:U('home/Person/collect')}">我的收藏</a></li>
+      <li><a href="{:U('home/Person/collect_top')}">收藏排行</a></li>
+     </ul>
+   </div>
+ <div class="mTB10 mL10 mR10">
+   <volist name="info" id="vo">
+    <div class="item favorite">
+      <div class="itemHead" >
+        <div class="fRight">  </div>
+        <span class="itemHeadTitle"><a href="{:U('home/Index/index_search',array('id'=>$vo['id'],'type'=>$vo['type']))}" target='_blank'>{$vo['subject']}</a> </span>
+        <a href="{:U('home/Person/collect_del',array('id'=>$vo['collect_id']))}" style="float:right;margin:5px 5px;">删除</a>
+      </div>
+      <div class="itemBody invisible" >
+        <div class="itemContent"><span>收藏次数: {$vo['collect']}&nbsp;&nbsp;&nbsp;</span><span>点击次数：{$vo['number']}&nbsp;&nbsp;&nbsp;</span><span>评论次数:{$vo['comment']}条&nbsp;&nbsp;&nbsp;</span><span>推荐次数:{$vo['groom']}</span></div>
+        <div class="itemBodyFoot"><span>作者: {$vo['author']}&nbsp;&nbsp;&nbsp;</span><span>发表时间：{$vo['createtime']}</sapn></div>
+      </div>
+    </div>
+    <hr class="dotted" />
+  </volist>       
+       <div class="pages"><div class="pagelistbox">
+    {$page}
+  </div>
+</div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<include file="Person:footer"/>

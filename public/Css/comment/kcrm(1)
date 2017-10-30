@@ -1,0 +1,5 @@
+BAIDU_SSP_define({"queryid" : "6eb42677fcbed6c7","tuid" : "2510662_0","placement" : {"basic" : {"cname":"55009048_cpr","conBackEnv":1,"flowType":1,"groupId":482204,"mediumType":1,"rspFormat":1,"sellType":1,"sspId":8,"tuId":2510662,"userId":3848536}
+,"container" : {"anchoredType":1,"floated":{},"height":250,"sizeType":1,"slide":{},"width":250}
+,"fillstyle" : {}
+,"userdefine" : "","complement_type" : 7},"extends" : {"ssph":250,"sspw":250}
+,"pdb_deliv" : {"deliv_id" : "2423619","deliv_des" : {"_html" : {"content":"\x3cscript type=\"text\/javascript\"\x3e\x0a    \/*250*250,文章中环绕*\/\x0a    var cpro_id = \"u2628392\";\x0a\x3c\/script\x3e\x0a\x3cscript src=\"http:\/\/cpro.baidustatic.com\/cpro\/ui\/c.js\" type=\"text\/javascript\"\x3e\x3c\/script\x3e","type":"rich","version":1,"unionFlag":"1"}},"brandad" : 0},"order_deliv" : {"deliv_id" : "0","demand_id" : "0"},"rtb_deliv" : {"deliv_id" : "0","demand_id" : "0"}});

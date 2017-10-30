@@ -1,0 +1,327 @@
+<?php if (!defined('THINK_PATH')) exit(); include('./admin/Tpl/inc/header.php') ; ?>
+<?php include('./admin/Tpl/inc/jsreference.php'); ?>
+
+
+<table id="tbList"></table>
+
+<div style="display:none;">
+    <div id="tb" style="height:auto;padding:10px;">
+    <fieldset>
+        <legend>过滤</legend>
+        <?php foreach($data as $vo):?>
+            <?php echo $vo;?>
+        <?php endforeach;?>
+        <!-- <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add'" id="btnAdd">新增</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-edit'" id="btnEdit">编辑</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" id="btnDel">删除</a> -->
+
+        <label style="margin-left: 20px;">名称：</label>
+        <input id="sname" type="text" class="txtinput" placeholder="请输入名称" value="" autocomplete="off" style="width:120px"/>
+           <label style="margin-left: 20px;">概述：</label>
+        <input id="sremark" type="text" class="txtinput" placeholder="请输入概述" value="" autocomplete="off" style="width:120px"/>
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="loadData()">查询</a>
+    </fieldset>
+    </div>
+
+ <div id="dialogAdd">
+    <ul class="ulform">
+       <!--  <li>
+            <label>编码:</label>
+            <input id="code" type="text"/>
+        </li> -->
+        <li>
+            <label>名称:</label>
+            <input id="name" type="text"/>
+        </li> 
+        <li>
+            <label>概述:</label>
+            <input id="remark" type="text"/>
+        </li> 
+    </ul>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+    var dg;
+
+    $(function ()
+    {
+        dg = new FCore.DataGrid("tbList", loadData);
+        dg.options.singleSelect = false;
+        dg.options.columns = [[
+                { field: 'id', title: '序号', width: 100,align:'center',sortable:'true',checkbox:true},
+                { field: 'code', title: '代码', width: 80 ,align:'center',sortable:'true'},
+                { field: 'localtion', title: '位置', width: 80 ,align:'center',sortable:'true'},
+                { field: 'name', title: '名称', width: 100,align:'center',sortable:'true'},
+                { field: 'title', title: '标题', width: 80 ,align:'center',sortable:'true'},
+                { field: 'img', title: '图片', width: 80 ,align:'center',sortable:'true'},
+                { field: 'sort', title: '排序', width: 80 ,align:'center',sortable:'true'},
+                { field: 'secondtype', title: '类型', width: 80 ,align:'center',sortable:'true'},
+                { field: 'secondsort', title: '排序', width: 80 ,align:'center',sortable:'true'},
+                { field: 'status', title: '状态', width: 80 ,align:'center',sortable:'true'},
+        ]];
+        dg.options.pageSize = 30;
+        dg.options.title = "";
+        dg.options.toolbar = "#tb";
+        $('#ddlstatus').combobox('select',99);
+        $('#ddlodevice').combobox('select',99);
+        dg.init();
+        dg.load();
+
+        $("#btnAdd").click(btnAdd_Click);
+        $("#btnEdit").click(btnEdit_Click);
+        $("#btnDel").click(btnDel_Click);
+
+        $("#btnUpdatePwd").click(btnUpdatePwd_Click);
+    });
+
+    function loadData()
+    {
+        var parms = {
+            remark:$("#sremark").val(),
+            name:$("#sname").val(),
+           PageIndex: dg.getPageIndex(),
+           PageSize: dg.getPageSize()
+       };
+
+       FCore.Ajax.Post("/admin.php/sniff/type_getlist", parms, function (data)
+       {
+        dg.update(data);
+    });
+   }
+
+   function btnAdd_Click()
+   {
+    openAddDialog("add");
+}
+
+
+function btnEdit_Click()
+{
+    openAddDialog("edit");
+}
+
+
+function openAddDialog(type)
+{
+    var sel, title;
+            //txtUserName txtFullName ddlStatus
+            $("#name,#code,#remark").val("");
+
+            title = "新增";
+
+            if (type == "edit")
+            {
+                sel = dg.getSelected();
+                if (!sel)
+                {
+                    jQuery.messager.alert('提示:','请选择要编辑的行!','info'); 
+                    return;
+                }
+                title = "编辑";
+
+                $("#name").val(sel.name);
+                $("#code").val(sel.code);
+                $("#remark").val(sel.remark);
+            }
+
+
+            $("#dialogAdd").dialog({
+                //closed: true,
+                iconCls: "icon-add",
+                modal: true,
+                resizable: true,
+                title: title,
+                width: 370,//document.documentElement.clientWidth-50,
+                height: 320,//document.documentElement.clientHeight - 50,
+                buttons: [{
+                    text: "确定",
+                    iconCls: 'icon-ok',
+                    handler: function ()
+                    {
+                        //确定 按钮事件
+
+                        //收集提交数据
+
+                        var parms = {
+                            id: type == "edit" ? sel.id : 0,
+                            name: $("#name").val(),
+                            code: $("#code").val(),
+                            remark: $("#remark").val(),
+                          
+                        };
+
+
+
+                        if (!parms.name)
+                        {
+                          jQuery.messager.alert('提示:','请填写名称!','info'); 
+                          return false;
+                      }
+                
+                      else if (!parms.remark)
+                      {
+                          jQuery.messager.alert('提示:','请填写概述!','info'); 
+                          return false;
+                      }
+                     
+                        else
+                        {
+                            FCore.Ajax.Post("/sniff/type/save", parms, function (d)
+                            {
+                                if (d.Ok)
+                                {
+                                    $("#dialogAdd").dialog("close");
+                                    loadData();
+                                }
+                                else
+                                {
+                                    alert(d.Msg);
+                                }
+
+                            });
+                        }
+
+                    }
+                }, {
+                    text: "取消", iconCls: 'icon-cancel',
+                    handler: function ()
+                    {
+                        //取消 按钮事件
+                        $("#dialogAdd").dialog("close");
+                    }
+                }]
+
+            });
+
+        }
+
+        function btnUpdatePwd_Click()
+        {
+            var sel;
+            $("#spanUserName,#spanFullName").val("");
+
+
+            sel = dg.getSelected();
+            if (!sel)
+            {
+                alert("请先选择用户");
+                return;
+            }
+
+            $("#spanUserName").text(sel.adm_id);
+            $("#spanFullName").text(sel.adm_name);
+            
+            $("#dialogUpdatePwd").dialog({
+                iconCls: "icon-key",
+                modal: true,
+                resizable: true,
+                title: "修改密码",
+                width: 300,//document.documentElement.clientWidth-50,
+                height: 220,//document.documentElement.clientHeight - 50,
+                buttons: [{
+                    text: "确定",
+                    iconCls: 'icon-ok',
+                    handler: function ()
+                    {
+                        //确定 按钮事件
+
+                        //收集提交数据
+
+                        var id = sel.id;
+                        var pwd = $("#txtPassword").val();
+                        var pwdcfm = $("#txtPasswordCfm").val();
+
+                        if (!pwd)
+                        {
+                            alert("请填写新密码");
+                            return false;
+                        }
+                        else if (!pwdcfm)
+                        {
+                            alert("请填写确认密码");
+                            return false;
+                        }
+                        else if (pwd != pwdcfm)
+                        {
+                            alert("两次输入的密码不一致");
+                            return false;
+                        }
+                        else
+                        {
+                            pwd = FCore.Sha1.Encrypt(pwd);
+
+                            FCore.Ajax.Post("/pms/sysadmin/updatepwd/" + id + "/" + pwd, null, function (d)
+                            {
+                                if (d.Ok)
+                                {
+                                    $("#dialogUpdatePwd").dialog("close");
+                                    //loadData();
+                                    alert("密码修改成功");
+                                }
+                                else
+                                {
+                                    alert(d.Msg);
+                                }
+
+                            });
+                        }
+
+                    }
+                }, {
+                    text: "取消", iconCls: 'icon-cancel',
+                    handler: function ()
+                    {
+                        //取消 按钮事件
+                        $("#dialogUpdatePwd").dialog("close");
+                    }
+                }]
+
+            });
+
+        }
+
+        function btnDel_Click()
+        {
+            var parms = dg.getSelections();
+
+            if (parms&&parms.length >0)
+            {
+                $.messager.confirm("删除", "确定要删除吗？", function (r)
+                {
+                    if (r)
+                    {
+                        var ids = [];
+                         $.each(parms, function (i,e)
+                         {
+                             ids.push(e.id);
+                         });
+                        FCore.Ajax.Post("/sniff/type/delete" ,{ids:ids.join()}, function (d)
+                        {
+                            if (d.Ok)
+                            {
+                                loadData();
+                            }
+                            else
+                            {
+                                FCore.Alert.Error(d.Msg);
+                            }
+                        });
+                    }
+
+                });
+
+            }
+            else
+            {
+                $.messager.alert('提示', '请选择删除的行!', 'info')
+            }
+        }
+
+    </script>
+
+
+
+<?php include('./Tpl/inc/footer.php'); ?>

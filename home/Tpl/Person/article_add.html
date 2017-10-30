@@ -1,0 +1,121 @@
+<include file="Person:header" />
+<include file="Person:left" />
+<link rel="stylesheet" href="__ROOT__/ueditor/themes/default/ueditor.css"/>
+
+ <script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.config.js"></script>
+ <script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/ueditor.all.min.js"> </script>
+ <script type="text/javascript" charset="utf-8" src="__ROOT__/ueditor/lang/zh-cn/zh-cn.js"></script>
+<div class="dedeMain">
+  <div class="location"><span class="titAddChannel1 icon">发表</span>普通文章</div>
+  <form class="mTB10 mL10 mR10" name="form1" action="{:U('home/Person/content_add')}" method="post" enctype="multipart/form-data" onsubmit="return checkSubmit();">
+    <input type="hidden" name="dopost" value="save" />
+    <input type="hidden" name="channelid" value="1" />
+    <table cellspacing="1" class="submit">
+      <thead>
+        <tr>
+          <th colspan="2" ><strong>常规参数：（文章发表后一般会在24小时内被审核，如果没有审核，请尽快联系管理员QQ：441380237<!-- <a href="http://www.duwenzhang.com/fabiaoshuoming.html" target="_blank"><u><font color="#FF0000">点击查看审核标准</font></u></a> -->）</strong></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td width="15%" align="right" valign="top">标题：</td>
+          <td><input name="title" type="text" id="title" size="30" class="text" style="width:230px;"/>
+            <span style="color:#F00">*</span>（<!-- 请尽量不要使用“无题”作标题， -->不超过20个汉字）</td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">文章分类：</td>
+            <td><select name='typeid' size='1' onchange='checktypeid();'>
+
+              <option value='' selected>请选择分类...</option>
+              <volist name="type" id="vo">
+                <option value="{$vo['id']}" class='option3'>{$vo['name']}</option>
+              </volist>
+            </select>
+ <!--  <span style="color:#F00">*</span>（注:转载文章不得侵犯原作者版权声明）<br />
+  <font color="red">字数</font>参考要求：原创文章>500字，心情日记>300字，诗歌不限。<a href="http://bbs.duwenzhang.com/" target="_blank"><font color="red"><u>简短文字请发表到论坛讨论</u></font></a> || <a href="http://www.eteste.com/" target="_blank"><u>字数统计工具</u></a>。
+  <input type="hidden" name="description" value="" /> --></td>
+</tr>
+  <!-- <tr>
+  <td align="right" valign="top">标签：</td>
+  <td><select name='tags' size='1'>
+<option value='' selected>请选择标签...</option>
+<option value='爱情' class='option3'>爱情</option>
+<option value='亲情' class='option3'>亲情</option>
+<option value='友情' class='option3'>友情</option>
+<option value='生活' class='option3'>生活</option>
+<option value='校园' class='option3'>校园</option>
+<option value='哲理' class='option3'>哲理</option>
+<option value='励志' class='option3'>励志</option>
+<option value='心情' class='option3'>心情</option>
+</select> <input type="hidden" name="writer" value="宁静致远333" /></td>
+</tr> -->
+ <!--  <tr>
+  <td align="right" valign="top">我的分类：</td>
+  <td><select name='mtypesid' size='1'>
+<option value='0' selected>请选择分类...</option>
+</select></td>
+</tr> -->
+
+<input type='hidden' name='dede_addonfields' value="">
+<tr>
+  <td rowspan="2" align="right" valign="top"><strong>正文内容：</strong></td>
+<!--   <td height="24">注意不要泄露<font color="red">个人隐私</font>(如真实姓名等)，请使用<a href="./data/biaodianfuhao.htm" target="_blank"><strong><u>规范的标点符号</u></strong></a>和简体字体,个人QQ等联系方式请放到<a href="/member/edit_space_info.php" target="_blank"><u>“空间公告”</u></a>中。<br />  
+  注意保持<span class="style1">段落间距</span>：<input name="fenduan" type="checkbox" value="1" checked="checked" />使用自动分段(诗歌不推荐使用自动分段)。&lt;<a href="paiban.html" target="_blank"><u>自动排版工具</u></a>&gt; </td> -->
+</tr>
+<tr>
+  <td height="250">
+    <div id="myEditor">
+      
+        <script id="editor"  name="editorValue" type="text/plain" style="width:740px;height:437px;">
+        {$article_item.message}
+        </script>
+
+    </div>
+    <!-- <textarea style="width:715px;" name="body" rows="30" id="body" onselect="AutoSave(this);" onclick="AutoSave(this);"></textarea> -->
+  </td>
+</tr>
+<!--   <input name='vdcode' type='hidden' id='vdcode' value='notuse' />  <tr>
+  <td align="right" valign="top">
+    评审类型：</td>
+  <td>
+   	
+	  <div id="typeid1"><input type="radio" name="shtype" value="1" checked="checked" />
+      基本评审&nbsp;&nbsp; 
+      <input type="radio" name="shtype" value="2" disabled />
+      <font color="gray">基本评审+高级评审（关于高级评审：编辑评审时会给文章提出意见或建议，高级编辑享有此功能）</font>
+</div>
+	  <div id="typeid2" style="display: none">诗歌、推荐转载文章不支持此功能。</div>
+	  
+	       	     
+	  </td>
+  </tr> -->
+<!-- <tr>
+  <td align="right" valign="top">是否花费编辑积分：</td>
+  <td>花费编辑积分可额外增加参与本文评审的编辑人数：
+     	     <div id="typeid3"> <input name="ifcostscore" type="radio" value="0" checked="checked" />
+      否&nbsp;&nbsp;<input name="ifcostscore" type="radio" value="1" disabled />
+      <font color="gray">是</font>&nbsp;&nbsp;<a href="http://www.duwenzhang.com/member/editor_apply.php" target="_blank">（申请成为编辑可获得编辑积分）</a></div>
+	  <div id="typeid4" style="display: none">诗歌、推荐转载文章不支持此功能。</div>
+	   	
+	     
+  	     
+</td>
+</tr> -->
+</tbody>
+<tfoot>
+  <tr>
+    <td height="45">&nbsp;</td>
+    <td height="45"> <!-- <span style="color:#F00">（重要：请在提交前对您的文章做好备份，以免提交失败丢失内容！）</span> --> <input type="submit" name="Submit" style="width:60px; height:25px;" value="提 交" onclick="return confirm('发表文章需要扣除2个积分，你确定要发表吗？')"></td>
+  </tr>
+</tfoot>
+</table>
+</form>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+
+<script type="text/javascript">var ue = UE.getEditor('editor');</script>
+<include file="Person:footer" />

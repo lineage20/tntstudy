@@ -1,0 +1,461 @@
+﻿* {
+    padding:0;
+    margin:0;
+    font-style:normal;
+    text-decoration:none;
+}
+
+body {
+    /*font-family: "微软雅黑", "宋体";
+    font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana","sans-serif";*/	
+    background-color: #F5f5f5;
+    min-width: 1226px;
+    font-size:14px;
+    color:#333;
+}
+
+.clear {
+    clear:both;
+}
+
+.fl {
+    float:left;
+}
+
+.fr {
+    float:right;
+}
+
+
+
+ .m1200 {
+            width: 1200px;
+            margin:auto;
+        }
+        header {
+            background: #1E1E1E;
+            /*position: fixed;*/
+            width: 100%;
+            height: 33px;
+            z-index: 9999;
+            overflow: hidden;
+        }
+            header > div {
+                line-height: 33px;
+            }
+        .top-menu {
+            float:left;
+        }
+        .top-menu > a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #ccc;
+        }
+        .top-menu > a:hover {
+            color: #fff;
+        }
+
+
+        /*语言选择*/
+        .lang-select {
+            display: inline-block;
+            width: 110px;
+            text-align: left;
+            color: rgb(255, 255, 255);
+            float: right;
+            font-size: 14px;
+            margin-left: 50px;
+            display:none;
+        }
+
+            .lang-select > p {
+                color: #aaa;
+                text-align: center;
+            }
+
+            .lang-select em {
+                display: inline-block;
+                background: transparent url("../img/earth_32.png") repeat scroll 0% 0% / 20px auto;
+                vertical-align: middle;
+                margin-right: 5px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .lang-select>div {
+                position: absolute;
+                z-index: 999;
+                width: 110px;
+                display: none;
+            }
+
+                .lang-select > div > a {
+                    padding: 5px;
+                    cursor: pointer;
+                    color: #ddd;
+                    list-style-type: none;
+                    opacity: .7;
+                    background: #01073d;
+                    display: block;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    transition: all 0.5s;
+                }
+
+                .lang-select >div>a>em {
+                    -webkit-filter: grayscale(100%);
+                    -moz-filter: grayscale(100%);
+                    -ms-filter: grayscale(100%);
+                    -o-filter: grayscale(100%);
+                    filter: grayscale(100%);
+                }
+
+                .lang-select > div > a:hover {
+                    padding: 5px;
+                   
+                    /*color: red;*/
+                    opacity: 1;
+                    /*background: #1E1E1E;*/
+                    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+                    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+                    animation: neon2 1.5s ease-in-out infinite alternate;
+                }
+                @-webkit-keyframes neon2 {
+                    from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+                    }
+                    to {
+                        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                    }
+                }
+                @-moz-keyframes neon2 {
+                    from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+                    }
+                    to {
+                        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                    }
+                }
+                @keyframes neon2 {
+                    from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+                    }
+                    to {
+                        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+                    }
+                }
+
+
+                    .lang-select >div>a:hover>em {
+                        -webkit-filter: grayscale(0%);
+                        -moz-filter: grayscale(0%);
+                        -ms-filter: grayscale(0%);
+                        -o-filter: grayscale(0%);
+                        filter: grayscale(0%);
+                    }
+        /*语言选择 结束*/
+
+          /*语言选择2*/
+
+           .lang-select2 {
+            display: inline-block;
+            width: 300px;
+            color: #FFF;
+            float: right;
+            font-size: 14px;
+            margin-left: 50px;
+            text-align: right;
+        }
+
+            .lang-select2 > a {
+                color: #AAA;
+                text-align: center;
+                display: inline-block;
+                line-height: 20px;
+                width: 90px;
+            }
+
+            .lang-select2 > a > i {
+                margin-right: 5px;
+                font-size: 20px;
+                vertical-align: bottom;
+            }
+            
+                .lang-select2 > a.active {
+                    color: #fff;
+                }
+                .lang-select2 > a.active > i {
+                    color: #0AF;
+                }
+
+                .lang-select2 > a:hover {
+                    color: #fff;
+                }
+                .lang-select2 > a:hover > i {
+                    color: #fff;
+                }
+
+
+          /*语言选择2 结束*/
+
+
+        nav {
+            display: block;
+            height: 80px;
+            line-height: 80px;
+            background: #fff;
+            box-shadow: 3px 3px 3px #ccc;
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+            nav > div {
+                background: #fff;
+            }
+
+        .logo {
+            display: inline-block;
+            height: 60px;
+            width: 86px;
+        }
+
+            .logo > img {
+                width: 100%;
+                height: 100%;
+                margin-top: 10px;
+                border:0;
+                margin-left: 30px;
+            }
+
+        .menu {
+            display:inline-block;   
+            float:right; 
+        }
+        .menu > a {
+            display: inline-block;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: bold;            
+            line-height: 80px;
+            color: #000;
+            padding:0 10px;
+            min-width:60px;
+            text-align:center;
+        }
+
+        .menu > a:hover,.menu > a.active {
+            color: rgb(230,0,18);
+            background-image: -ms-linear-gradient(top, #fff, #ddd); /* IE9+ */
+            background-image: -moz-linear-gradient(top, #fff, #ddd); /* Firefox */
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #ddd)); /* Saf4+, Chrome */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dddddd', GradientType='0'); /* IE8-*/
+        }
+
+        .menu > a.home {
+            color: red;
+        }
+
+
+  /*面包屑开始*/
+
+         .breadcrumbs {
+            background: #f5f5f5;
+            line-height: 40px;
+            color: #888;
+        }
+
+            .breadcrumbs>.container > .nav {
+            margin-left: 12px;
+            }
+
+                .breadcrumbs > .container >.nav > a {                    
+                    color: #888;
+                }
+
+                    .breadcrumbs > .container >.nav > a.active {
+                        font-size: 16px;
+                        color: rgb(51, 51, 51);
+                    }
+
+                     .breadcrumbs > .container >.nav > a:hover {
+                        color: red;
+                    }
+                .breadcrumbs> .container > .nav > span {
+                    color:#aaa;
+                }
+
+        .breadcrumbs > .container > .location {
+            float: right;
+            margin-right: 12px;
+        }
+        .breadcrumbs > .container > .location>a {            
+            color: #888;
+        }
+        .breadcrumbs > .container > .location>a:hover {            
+            color: blue;
+        }
+        .breadcrumbs > .container > .location>span {
+            color:#aaa;
+        }
+
+
+
+                
+  /*面包屑结束*/
+
+
+  /*footer开始*/
+        footer {
+            background: #000;
+            padding: 30px 0px;
+            color: #888;
+            height:auto;
+        }
+
+        footer>div {
+            height:120px;
+        }
+
+
+        .footermenu {
+            margin: auto;
+            color: #666;
+            text-align: center;
+        }
+
+            .footermenu > a {
+                display: inline-block;
+                color: #aaa;
+                font-size: 16px;
+                padding: 5px;
+            }
+
+            .footermenu > a:hover {
+                color:#fff;
+            }
+
+        .copyright {
+            width:500px;
+            line-height: 180%;
+        }
+
+        .newmedia {
+            width:680px;
+            text-align:right;
+        }
+       
+         .newmedia > a {
+            border: 2px solid #000;
+            display: inline-block;
+            border-radius: 30px;
+            width: 48px;
+            height: 48px;
+            font-size: 35px;
+            text-align: center;
+            line-height: 50px;
+            margin-left: 10px;
+            color: #aaa;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            cursor:pointer;
+        }
+            .newmedia > a:hover {
+                border: 2px solid #0f0;
+                color: #ff0;
+                -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+                -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+                animation: neon2 1.5s ease-in-out infinite alternate;
+            }
+
+
+        /*footer结束*/
+
+        
+
+        .container {
+            width:1200px;
+            height:auto;       
+            margin:auto;   
+            overflow:hidden;
+        }
+
+
+
+        
+        .titleframe {
+            padding: 20px;
+            min-height: 610px;
+        }
+            .titleframe > div {
+                border: 1px solid rgb(204, 204, 204);
+                min-height: 500px;
+                margin-bottom: 20px;
+            }
+
+                .titleframe > div > i {
+                    background-image: -moz-linear-gradient(top, #fff, #eee); /* Firefox */
+                    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #eee)); /* Saf4+, Chrome */
+                    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#eeeeee', GradientType='0'); /* IE*/
+                    display: block;
+                    line-height: 30px;
+                    padding-left: 10px;
+                    border-bottom: 1px solid #ccc;
+                }
+            .titleframe > div>i>i {
+                margin-right:5px;
+            }
+                .titleframe > div > p {
+                    padding: 10px;
+                }
+
+                
+
+                
+            .title {
+                text-indent: unset;
+                background: #b31c3c;
+                margin-top: 30px;
+            }
+                .title > div {
+                    background: #434142;
+                    color: #fff;
+                    display: inline-block;
+                    padding-left: 20px;
+                    height: 35px;
+                    line-height: 35px;
+                }
+
+
+                .title>div > i {
+                    margin-right: 5px;
+                    font-size: 20px;
+                }
+                    .title > div > u {
+                        display: inline-block;
+                        height: 35px;
+                        font-size: 18px;
+                    }
+
+                    .title > div > em {
+                        background-image: url("../img/products/title-split.png");
+                        display: inline-block;
+                        width: 35px;
+                        height: 35px;
+                        vertical-align: top;
+                        margin-left:30px
+                    }
+
+            .title > .more {
+                float: right;
+                margin-right: 20px;
+                color: #fff;
+                width: 60px;
+                line-height: 35px;
+            }
+               .title > .more:hover {
+                    color: #000;
+                }
+
+
+
+               

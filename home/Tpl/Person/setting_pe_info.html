@@ -1,0 +1,419 @@
+ <include file="Person:header"/>
+ <include file="Person:left"/>
+
+ <div class="dedeMain">
+  <div class="location">设置个人资料</div>
+  <div class="titleTabBar bgGreen lineTB">
+    <ul>
+      <li><a href="{:U('home/Person/setting_info')}">基本资料</a></li>
+      <li class="select"><a href="{:U('home/Person/setting_pe_info')}">个人资料</a></li>
+      <!-- <li><a href="{:U('home/Person/setting_space')}">空间设置</a></li> -->
+    </ul>
+  </div>
+  <form class="mTB10 mL10 mR10" name="form2" action="edit_fullinfo.php" method="post" onsubmit="return checkSubmit();">
+    <input type="hidden" name="dopost" value="save" />
+    <div class="titleBar bgGrass lineB mB10">
+      <div class="fLeftNoForm"><strong>个人详细资料</strong></div>
+      <div class="fRight titSecondary white" style="margin-top:5px;"></div>
+    </div>
+    <div class="item info">
+      <div class="itemHead bgGrass titleBar" >
+        <div class="fLeft"><b>基本资料</b></div>
+        <div class="fRight titShow icon16" style="margin-top:5px;"></div>
+      </div>
+      <div class="itemBody" >
+        <table cellspacing="1" class="submit">
+          <tbody>
+            <tr>
+              <td align="right" valign="top">目前所在地：</td>
+              <td colspan="3"><input name="uname" type="hidden" value="宁静致远333" />
+               <select name="province" id="province" onchange="javascript:selNext(document.getElementById('city'),this.value)">
+                <option value='0'>选择一级地区</option>
+                <option value='500'>北京市</option>
+                <option value='1000'>上海市</option>
+                <option value='1500'>天津市</option>
+                <option value='2000'>重庆市</option>
+                <option value='2500'>广东省</option>
+                <option value='3000'>福建省</option>
+                <option value='3500'>浙江省</option>
+                <option value='4000'>江苏省</option>
+                <option value='4500'>山东省</option>
+                <option value='5000'>辽宁省</option>
+                <option value='5500'>江西省</option>
+                <option value='6000'>四川省</option>
+                <option value='6500'>陕西省</option>
+                <option value='7000'>湖北省</option>
+                <option value='7500'>河南省</option>
+                <option value='8000'>河北省</option>
+                <option value='8500'>山西省</option>
+                <option value='9000'>内蒙古</option>
+                <option value='9500'>吉林省</option>
+                <option value='10000'>黑龙江</option>
+                <option value='10500'>安徽省</option>
+                <option value='11000'>湖南省</option>
+                <option value='11500'>广西区</option>
+                <option value='12000'>海南省</option>
+                <option value='12500'>云南省</option>
+                <option value='13000'>贵州省</option>
+                <option value='13500'>西藏区</option>
+                <option value='14000'>甘肃省</option>
+                <option value='14500'>宁夏区</option>
+                <option value='15000'>青海省</option>
+                <option value='15500'>新疆区</option>
+                <option value='16000'>香港区</option>
+                <option value='16500'>澳门区</option>
+                <option value='17000'>台湾省</option>
+              </select>
+              &nbsp;
+              <select id="city" name="city">
+                <option value='0'>选择具体地区</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">家乡所在地：</td>
+            <td colspan="3">
+             <select name="oldprovince" id="oldprovince" onchange="javascript:selNext(document.getElementById('oldcity'),this.value)">
+               <option value='0'>选择一级地区</option>
+               <option value='500'>北京市</option>
+               <option value='1000'>上海市</option>
+               <option value='1500'>天津市</option>
+               <option value='2000'>重庆市</option>
+               <option value='2500'>广东省</option>
+               <option value='3000'>福建省</option>
+               <option value='3500'>浙江省</option>
+               <option value='4000'>江苏省</option>
+               <option value='4500'>山东省</option>
+               <option value='5000'>辽宁省</option>
+               <option value='5500'>江西省</option>
+               <option value='6000'>四川省</option>
+               <option value='6500'>陕西省</option>
+               <option value='7000'>湖北省</option>
+               <option value='7500'>河南省</option>
+               <option value='8000'>河北省</option>
+               <option value='8500'>山西省</option>
+               <option value='9000'>内蒙古</option>
+               <option value='9500'>吉林省</option>
+               <option value='10000'>黑龙江</option>
+               <option value='10500'>安徽省</option>
+               <option value='11000'>湖南省</option>
+               <option value='11500'>广西区</option>
+               <option value='12000'>海南省</option>
+               <option value='12500'>云南省</option>
+               <option value='13000'>贵州省</option>
+               <option value='13500'>西藏区</option>
+               <option value='14000'>甘肃省</option>
+               <option value='14500'>宁夏区</option>
+               <option value='15000'>青海省</option>
+               <option value='15500'>新疆区</option>
+               <option value='16000'>香港区</option>
+               <option value='16500'>澳门区</option>
+               <option value='17000'>台湾省</option>
+             </select>
+             &nbsp;
+             <select id="oldcity" name="oldcity">
+              <option value='0'>选择具体地区</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td align="right" valign="top">出生日期：</td>
+          <td colspan="3"><input name="birthday" type="text" id="birthday" class="text" value="1980-01-01" onclick="SelectDate(this,'yyyy-MM-dd',80,0)" />
+          </td>
+        </tr>
+        <tr>
+          <td align="right" valign="top">交友目的：</td>
+          <td width="40%"><select name='datingtype' id='datingtype' class='enumselect'>
+           <option value='0' selected='selected'>--请选择--</option>
+           <option value='1'>网友</option>
+           <option value='2'>恋人</option>
+           <option value='3'>玩伴</option>
+           <option value='4'>共同兴趣</option>
+           <option value='5'>男性朋友</option>
+           <option value='6'>女性朋友</option>
+         </select></td>
+         <td width="15%" align="right" valign="top">婚姻状况：</td>
+         <td><select name='marital' id='marital' class='enumselect'>
+           <option value='0' selected='selected'>--请选择--</option>
+           <option value='1'>未婚</option>
+           <option value='2'>已婚</option>
+           <option value='3'>离异</option>
+           <option value='4'>丧偶</option>
+         </select></td>
+       </tr>
+       <tr>
+        <td align="right" valign="top">星座：</td>
+        <td><select name='star' id='star' class='enumselect'>
+         <option value='0' selected='selected'>--请选择--</option>
+         <option value='1' selected='selected'>白羊座</option>
+         <option value='2'>金牛座</option>
+         <option value='3'>双子座</option>
+         <option value='4'>巨蟹座</option>
+         <option value='5'>狮子座</option>
+         <option value='6'>处女座</option>
+         <option value='7'>天枰座</option>
+         <option value='8'>天蝎座</option>
+         <option value='9'>射手座</option>
+         <option value='10'>摩羯座</option>
+         <option value='11'>水瓶座</option>
+         <option value='12'>双鱼座</option>
+       </select></td>
+       <td align="right" valign="top">血型：</td>
+       <td><select name='blood' id='blood' class='enumselect'>
+         <option value='0' selected='selected'>--请选择--</option>
+         <option value='1'>A</option>
+         <option value='2'>B</option>
+         <option value='3'>AB</option>
+         <option value='4'>O</option>
+       </select></td>
+     </tr>
+     <tr>
+      <td align="right" valign="top">身高：</td>
+      <td><input name='height' type='text' class="text" id='height' style='width:80px' value='160' />
+        厘米</td>
+        <td align="right" valign="top">体型：</td>
+        <td><select name='bodytype' id='bodytype' class='enumselect'>
+         <option value='0' selected='selected'>--请选择--</option>
+         <option value='1'>匀称</option>
+         <option value='2'>苗条</option>
+         <option value='3'>健壮</option>
+         <option value='4'>略胖</option>
+         <option value='5'>丰满</option>
+         <option value='6'>瘦小</option>
+         <option value='7'>高瘦</option>
+       </select></td>
+     </tr>
+     <tr>
+      <td align="right" valign="top">交友宣言：</td>
+      <td colspan="3"><textarea name='lovemsg' style='width:500px;height:45px'></textarea>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="item info">
+  <div class="itemHead bgGrass titleBar" >
+    <div class="fLeft"><b>联系方式</b></div>
+    <div class="fRight titShow icon16" style="margin-top:5px;"></div>
+  </div>
+  <div class="itemBody" >
+    <table cellspacing="1" class="submit">
+      <tbody>
+        <tr>
+          <td width="15%" align="right" valign="top">联系方式限制：</td>
+          <td colspan="3"><input name="onlynet" type="radio" id="onlynet" value="2"  />
+            不公开所有联系方式
+            <input name="onlynet" type="radio" id="onlynet" value="1" checked='checked' />
+            不公开电话、详细地址
+            <input name="onlynet" type="radio" id="onlynet" value="0"  />
+            公开所有联系方式 </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">QQ帐号：</td>
+            <td colspan="3"><input name="qq" type="text" class="text" id="qq" value="" size="15" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">email帐号：</td>
+            <td colspan="3"><input name="msn" type="text" id="msn" value="" class="text" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">电话：</td>
+            <td colspan="3"><input name="tel" type="text" id="tel" class="text" value="" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">手机：</td>
+            <td colspan="3"><input name="mobile" type="text" id="mobile" class="text" value="" />
+            </td>
+          </tr>
+          <tr>
+            <td align="right" valign="top">详细地址：</td>
+            <td colspan="3"><input name="address" type="text" class="text" id="address" style="width:350px" value="" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="item info">
+    <div class="itemHead bgGrass titleBar" >
+      <div class="fLeft"><b>经济状况</b></div>
+      <div class="fRight titHide icon16" style="margin-top:5px;"></div>
+    </div>
+    <div class="itemBody invisible" >
+      <table cellspacing="1" class="submit">
+        <tbody>
+          <tr>
+            <td width="15%" align="right" valign="top">收入情况：</td>
+            <td width="40%"><select name='income' id='income' class='enumselect'>
+             <option value='0' selected='selected'>--请选择--</option>
+             <option value='1'>低于1000元</option>
+             <option value='2'>1000元以上</option>
+             <option value='3'>2000元以上</option>
+             <option value='4'>4000元以上</option>
+             <option value='5'>8000元以上</option>
+             <option value='6'>15000以上</option>
+           </select></td>
+           <td width="15%">教育程度：</td>
+           <td><select name='education' id='education' class='enumselect'>
+             <option value='0' selected='selected'>--请选择--</option>
+             <option value='1'>初中以上</option>
+             <option value='2'>高中/中专</option>
+             <option value='3'>大学专科</option>
+             <option value='4'>大学本科</option>
+             <option value='5'>硕士</option>
+             <option value='6'>博士以上</option>
+           </select></td>
+         </tr>
+         <tr>
+          <td align="right" valign="top">住房情况：</td>
+          <td><select name='house' id='house' class='enumselect'>
+           <option value='0' selected='selected'>--请选择--</option>
+           <option value='1'>租房</option>
+           <option value='2'>一房以上</option>
+           <option value='3'>两房以上</option>
+           <option value='4'>大户/别墅</option>
+         </select></td>
+         <td>所属行业：</td>
+         <td><select name='vocation' id='vocation' class='enumselect'>
+           <option value='0' selected='selected'>--请选择--</option>
+           <option value='500'>互联网</option>
+           <option value='501'>└─ 网站制作</option>
+           <option value='502'>└─ 虚心</option>
+           <option value='503'>└─ cms制作</option>
+           <option value='1000'>机械</option>
+           <option value='1001'>└─ 农业机械</option>
+           <option value='1002'>└─ 机床</option>
+           <option value='1003'>└─ 纺织设备和器材</option>
+           <option value='1004'>└─ 风机/排风设备</option>
+         </select></td>
+       </tr>
+       <tr>
+        <td align="right" valign="top">掌握语言：</td>
+        <td colspan="3"><ul class="picList">
+          <li><input type='checkbox' name='language[]' id='language0' value='普通话' class='np' />普通话</li>
+          <li><input type='checkbox' name='language[]' id='language1' value='上海话' class='np' />上海话</li>
+          <li><input type='checkbox' name='language[]' id='language2' value='广东话' class='np' />广东话</li>
+          <li><input type='checkbox' name='language[]' id='language3' value='英语' class='np' />英语</li>
+          <li><input type='checkbox' name='language[]' id='language4' value='日语' class='np' />日语</li>
+          <li><input type='checkbox' name='language[]' id='language5' value='韩语' class='np' />韩语</li>
+          <li><input type='checkbox' name='language[]' id='language6' value='法语' class='np' />法语</li>
+          <li><input type='checkbox' name='language[]' id='language7' value='意大利语' class='np' />意大利语</li>
+          <li><input type='checkbox' name='language[]' id='language8' value='德语' class='np' />德语</li>
+          <li><input type='checkbox' name='language[]' id='language9' value='西班牙语' class='np' />西班牙语</li>
+          <li><input type='checkbox' name='language[]' id='language10' value='俄语' class='np' />俄语</li>
+          <li><input type='checkbox' name='language[]' id='language11' value='阿拉伯语' class='np' />阿拉伯语</li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="item info">
+  <div class="itemHead bgGrass titleBar" >
+    <div class="fLeft"><b>兴趣爱好</b></div>
+    <div class="fRight titHide icon16" style="margin-top:5px;"></div>
+  </div>
+  <div class="itemBody invisible" >
+    <table cellspacing="1" class="submit">
+      <tbody>
+        <tr>
+          <td width="15%" align="right" valign="top">是否喝酒：</td>
+          <td width="40%"><select name='drink' id='drink' class='enumselect'>
+           <option value='0' selected='selected'>--请选择--</option>
+           <option value='1'>不喝酒</option>
+           <option value='2'>偶尔喝一点</option>
+           <option value='3'>喝得很凶</option>
+         </select></td>
+         <td width="15%" align="right" valign="top">是否抽烟：</td>
+         <td><select name='smoke' id='smoke' class='enumselect'>
+           <option value='0' selected='selected'>--请选择--</option>
+           <option value='1'>不吸烟</option>
+           <option value='2'>偶尔吸一点</option>
+           <option value='3'>抽得很凶</option>
+         </select></td>
+       </tr>
+       <tr>
+        <td align="right" valign="top">兴趣爱好：</td>
+        <td colspan="3"><ul class="picList">
+          <li><input type='checkbox' name='nature[]' id='nature0' value='性格外向' class='np' />性格外向</li>
+          <li><input type='checkbox' name='nature[]' id='nature1' value='性格内向' class='np' />性格内向</li>
+          <li><input type='checkbox' name='nature[]' id='nature2' value='活泼开朗' class='np' />活泼开朗</li>
+          <li><input type='checkbox' name='nature[]' id='nature3' value='沉默寡言' class='np' />沉默寡言</li>
+          <li><input type='checkbox' name='nature[]' id='nature4' value='幽默' class='np' />幽默</li>
+          <li><input type='checkbox' name='nature[]' id='nature5' value='稳重' class='np' />稳重</li>
+          <li><input type='checkbox' name='nature[]' id='nature6' value='轻浮' class='np' />轻浮</li>
+          <li><input type='checkbox' name='nature[]' id='nature7' value='冲动' class='np' />冲动</li>
+          <li><input type='checkbox' name='nature[]' id='nature8' value='坚强' class='np' />坚强</li>
+          <li><input type='checkbox' name='nature[]' id='nature9' value='脆弱' class='np' />脆弱</li>
+          <li><input type='checkbox' name='nature[]' id='nature10' value='幼稚' class='np' />幼稚</li>
+          <li><input type='checkbox' name='nature[]' id='nature11' value='成熟' class='np' />成熟</li>
+          <li><input type='checkbox' name='nature[]' id='nature12' value='能说会道' class='np' />能说会道</li>
+          <li><input type='checkbox' name='nature[]' id='nature13' value='自私' class='np' />自私</li>
+          <li><input type='checkbox' name='nature[]' id='nature14' value='真诚' class='np' />真诚</li>
+          <li><input type='checkbox' name='nature[]' id='nature15' value='独立' class='np' />独立</li>
+          <li><input type='checkbox' name='nature[]' id='nature16' value='依赖' class='np' />依赖</li>
+          <li><input type='checkbox' name='nature[]' id='nature17' value='任性' class='np' />任性</li>
+          <li><input type='checkbox' name='nature[]' id='nature18' value='自负' class='np' />自负</li>
+          <li><input type='checkbox' name='nature[]' id='nature19' value='自卑' class='np' />自卑</li>
+          <li><input type='checkbox' name='nature[]' id='nature20' value='温柔体贴' class='np' />温柔体贴</li>
+          <li><input type='checkbox' name='nature[]' id='nature21' value='神经质' class='np' />神经质</li>
+          <li><input type='checkbox' name='nature[]' id='nature22' value='拜金' class='np' />拜金</li>
+          <li><input type='checkbox' name='nature[]' id='nature23' value='小心翼翼' class='np' />小心翼翼</li>
+          <li><input type='checkbox' name='nature[]' id='nature24' value='暴躁' class='np' />暴躁</li>
+          <li><input type='checkbox' name='nature[]' id='nature25' value='倔强' class='np' />倔强</li>
+          <li><input type='checkbox' name='nature[]' id='nature26' value='逆来顺受' class='np' />逆来顺受</li>
+          <li><input type='checkbox' name='nature[]' id='nature27' value='不拘小节' class='np' />不拘小节</li>
+          <li><input type='checkbox' name='nature[]' id='nature28' value='婆婆妈妈' class='np' />婆婆妈妈</li>
+          <li><input type='checkbox' name='nature[]' id='nature29' value='交际广泛' class='np' />交际广泛</li>
+          <li><input type='checkbox' name='nature[]' id='nature30' value='豪爽' class='np' />豪爽</li>
+          <li><input type='checkbox' name='nature[]' id='nature31' value='害羞' class='np' />害羞</li>
+          <li><input type='checkbox' name='nature[]' id='nature32' value='狡猾善变' class='np' />狡猾善变</li>
+          <li><input type='checkbox' name='nature[]' id='nature33' value='耿直' class='np' />耿直</li>
+          <li><input type='checkbox' name='nature[]' id='nature34' value='虚伪' class='np' />虚伪</li>
+          <li><input type='checkbox' name='nature[]' id='nature35' value='乐观向上' class='np' />乐观向上</li>
+          <li><input type='checkbox' name='nature[]' id='nature36' value='悲观消极' class='np' />悲观消极</li>
+          <li><input type='checkbox' name='nature[]' id='nature37' value='郁郁寡欢' class='np' />郁郁寡欢</li>
+          <li><input type='checkbox' name='nature[]' id='nature38' value='孤僻' class='np' />孤僻</li>
+          <li><input type='checkbox' name='nature[]' id='nature39' value='难以琢磨' class='np' />难以琢磨</li>
+          <li><input type='checkbox' name='nature[]' id='nature40' value='胆小怕事' class='np' />胆小怕事</li>
+          <li><input type='checkbox' name='nature[]' id='nature41' value='敢做敢当' class='np' />敢做敢当</li>
+          <li><input type='checkbox' name='nature[]' id='nature42' value='助人为乐' class='np' />助人为乐</li>
+          <li><input type='checkbox' name='nature[]' id='nature43' value='老实' class='np' />老实</li>
+          <li><input type='checkbox' name='nature[]' id='nature44' value='守旧' class='np' />守旧</li>
+          <li><input type='checkbox' name='nature[]' id='nature45' value='敏感' class='np' />敏感</li>
+          <li><input type='checkbox' name='nature[]' id='nature46' value='迟钝' class='np' />迟钝</li>
+          <li><input type='checkbox' name='nature[]' id='nature47' value='武断' class='np' />武断</li>
+          <li><input type='checkbox' name='nature[]' id='nature48' value='果断' class='np' />果断</li>
+          <li><input type='checkbox' name='nature[]' id='nature49' value='优柔寡断' class='np' />优柔寡断</li>
+          <li><input type='checkbox' name='nature[]' id='nature50' value='暴力倾向' class='np' />暴力倾向</li>
+          <li><input type='checkbox' name='nature[]' id='nature51' value='刻薄' class='np' />刻薄</li>
+          <li><input type='checkbox' name='nature[]' id='nature52' value='损人利己' class='np' />损人利己</li>
+          <li><input type='checkbox' name='nature[]' id='nature53' value='附庸风雅' class='np' />附庸风雅</li>
+          <li><input type='checkbox' name='nature[]' id='nature54' value='时喜时悲' class='np' />时喜时悲</li>
+          <li><input type='checkbox' name='nature[]' id='nature55' value='患得患失' class='np' />患得患失</li>
+          <li><input type='checkbox' name='nature[]' id='nature56' value='快言快语' class='np' />快言快语</li>
+          <li><input type='checkbox' name='nature[]' id='nature57' value='豪放不羁' class='np' />豪放不羁</li>
+          <li><input type='checkbox' name='nature[]' id='nature58' value='多愁善感' class='np' />多愁善感</li>
+          <li><input type='checkbox' name='nature[]' id='nature59' value='循规蹈矩' class='np' />循规蹈矩</li>
+        </ul></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<hr />
+<div style="margin-left:15%">
+  <button class="button2" type="submit">更新</button>           
+</div>
+</form>
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<include file="Person:footer"/>

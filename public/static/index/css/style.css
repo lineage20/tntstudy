@@ -1,0 +1,59 @@
+/*
+[name]夏荷[/name]
+[iconbgcolor]#C4C7BE[/iconbgcolor]
+Powered by Discuz! X
+*/
+
+html body {/* padding-top: 1px; */background: url(../images/comlimi_bgimg.jpg) center 1px fixed no-repeat;}
+#comlimi_header {background: url(../images/bg_head.jpg) center;}
+.comlimi_serach { background-color: rgb(244, 244, 236);}
+#scbar { overflow: visible; position: relative; }
+#sg { background: #FFF; width:456px; border: 1px solid #B2C7DA; }
+.scbar_narrow #sg { width: 316px; }
+#sg li { padding:0 8px; line-height:30px; font-size:14px; }
+#sg li span { color:#999; }
+.sml { background:#FFF; cursor:default; }
+.smo { background:#E5EDF2; cursor:default; }
+.footer-box{width:100%;height:70px;position:fixed;bottom:0;z-index: 999;padding: 18px 0 7px;border-top: 1px solid #D2E0B1;border-bottom: 1px solid #D2E0B1;box-shadow: 2px 2px 6px #8CA226;background: rgba(217,230,187,0.9);}
+.footer-box .girl{position:absolute;bottom: -317px;height: 549px;right:0;}
+.footer-box .sm{width:980px;height:70px;position: relative;margin: 0 auto;}	
+.footer-box .sbw p{margin-top: 3px;height: 30px;font: 400 24px/30px 'Microsoft YaHei',SimHei;color: #8CA226;color: #8CA226;text-align:center;font-size:18px;}
+.footer-box .sbw p a{color: #8CA226;text-align:center;font-size:18px;}
+.footer-box .sbw p a:hover{color: #ff7e00;}
+.footer-box .sbw {width: 980px;float: left;}
+#scrolltop{display:none;}
+#toup{position:fixed;right:20px;bottom:10%;display:none;}
+#toup{background:url(../images/moji.png) no-repeat;height:165px;width:32px;}
+.p_pop,{padding: 4px;border: 1px solid;min-width: 60px;border-color: #DDD;background: #FEFEFE;box-shadow: 1px 2px 2px rgba(0,0,0,0.3);}
+.cl {zoom: 1;}
+.xg1, .xg1 a {color: #999 !important;}
+.y {float: right;}
+* html, * html body{background-image:url(about:blank);background-attachment:fixed}
+.flflfl {float: left;}
+.close {position: absolute;top: 4px;right: 10px;padding-top: 15px;width: 26px;height: 28px;background: url(../images/guanbi.png)   no-repeat scroll 0 0 transparent;overflow: hidden;z - index: 9;cursor: pointer;}
+.login-arrow{width:30px;height:15px;} 
+.login-wrap{position:fixed;left:0;bottom:0;width:100%;_position:absolute;z-index:999;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));}
+.login-ie6-fixed{bottom:0;}
+.login-box{padding:18px 0 7px;border-top:1px solid #D2E0B1;border-bottom:1px solid #D2E0B1;box-shadow:2px 2px 6px #8CA226;background:#D9E6BB;filter:progid:DXImageTransform.Microsoft.gradient(enabled=true,startColorstr=#E5D9E6BB,endColorstr=#E5D9E6BB);background:rgba(217,230,187,0.9);}
+.login-user{position:relative;margin:0 auto;width:980px;height:70px;}
+.login-user a,.login-user a:visited{color:#666;}.login-user a:hover{color:#0657B2;}
+.login-user .txt{padding:3px;border:1px solid #D8D8D8;color:#333;}
+.login-user .txt:hover,.login-user .txt:focus{border-color:#7DBDE2;}
+.login-title,.login-cont,.login-ft{display:inline;position:relative;}
+.login-title{color:#8CA226;margin-bottom:14px;margin-right:10px;}
+.login-title h3{margin-top:3px;height:30px;font:400 24px/30px 'Microsoft YaHei',SimHei;}
+
+.login-cont{height:63px;}.login-cont .mg0{margin:0;}
+.login-cont .txt{float:left;margin-bottom:10px;width:140px;height:25px;line-height:25px;color:#999;font-size:14px;zoom:1;}
+.login-cont .login-captcha{width:112px;}.login-cont .login-captcha .txt{margin-bottom:0;}
+.login-cont ul{position:absolute;top:0;left:0;width:720px;}
+.login-cont li{display:inline;float:left;margin-right:10px;height:80px;overflow:hidden;}
+.login-cont .login-item{color:#666;clear:both;}.login-cont .login-item input{margin-top:-2px;}
+.login-cont .login-button,.login-cont .login-button:visited{display:block;float:left;width:64px;color:#fff;border:1px solid #b9c97d;border-radius:6px;font-size:14px;font-weight:700;height:33px;line-height:33px;margin-right:10px;text-align:center;background:#7f9c14;background:-moz-linear-gradient(top,#abbf42,#8ea423);background:-webkit-linear-gradient(top,#abbf42,#8ea423);}
+.login-cont .login-button:hover{border:1px solid #b9c97d;border-radius:6px;text-decoration:none;color:#fff;background-position:0 -108px;background:#a8b748;background:-moz-linear-gradient(top,#c4d323,#a8b748);background:-webkit-linear-gradient(top,#c4d323,#a8b748);}
+.login-cont .login-label{float:left;font-size:14px;width:112px;display:none;}.login-cont .login-qt{width:77px;height:60px;border-right:1px solid #b9c97d;}#J_loginGuide .login-shortcut{margin-top:20px;}
+.container_bottom{background: url(../images/comlimi_container_bottom.png) no-repeat scroll 0 0 transparent;height: 11px;overflow: hidden;}
+
+/*公共弹框*/
+#window-bg{background: #000;opacity: 0.5; width: 100%;height: 100%;left: 0;top: 0; z-index: 10001;position: fixed;/*    display: none;*/}
+#float_box{position: fixed;top: 18%;left: 50%;margin-left: -200px;z-index: 99991;width:400px;height:232.84px;background-image:url(../images/float_box.jpg);background-size:400px 232.84px;}

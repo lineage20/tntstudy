@@ -1,0 +1,8 @@
+[ 2017-10-26T14:18:53+08:00 ] /admin.php | NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead common.php 第 66 行.
+[ 2017-10-26T14:18:53+08:00 ] /admin.php | INFO: Tag[ app_begin ] --START--
+[ 2017-10-26T14:18:53+08:00 ] /admin.php | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000268s ]
+[ 2017-10-26T14:18:53+08:00 ] /admin.php | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000308s ]
+[ 2017-10-26T14:19:03+08:00 ] /admin.php | NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead common.php 第 66 行.
+[ 2017-10-26T14:19:03+08:00 ] /admin.php | INFO: Tag[ app_begin ] --START--
+[ 2017-10-26T14:19:03+08:00 ] /admin.php | INFO: Run ReadHtmlCache Behavior [ RunTime:0.000307s ]
+[ 2017-10-26T14:19:03+08:00 ] /admin.php | INFO: Tag[ app_begin ] --END-- [ RunTime:0.000341s ]

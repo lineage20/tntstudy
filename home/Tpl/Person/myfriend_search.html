@@ -1,0 +1,235 @@
+ <include file="Person:header" />
+ <include file="Person:left" />
+ <div class="dedeMain">
+  <div class="location">查找好友</div>
+  <div class="titleTabBar bgGreen lineTB">
+    <ul>
+      <li><a href="{:U('home/Person/myfriend')}">所有好友</a></li>
+      <li ><a href="{:U('home/Person/myfriend_trends')}">好友动态</a></li>
+      <li class="select"><a href="{:U('home/Person/myfriend_search')}">查找好友</a></li>
+      <li ><a href="{:U('home/Person/wholookme')}">谁来看过我</a></li>
+      <li><a href="{:U('home/Person/mylookwho')}">我最近访问</a></li>
+    </ul>
+  </div>
+  <div class="mTB10 mL10 mR10">
+    <div class="titleBar lineB mB10 textCenter">
+      <form action="search.php">
+        <input class="text" type='text' name='keyword' value='' />
+        <select name="province" id="province" onchange="javascript:selNext(document.getElementById('city'),this.value)">
+          <option value='0'>一级地区</option>
+          <option value='500'>北京市</option>
+          <option value='1000'>上海市</option>
+          <option value='1500'>天津市</option>
+          <option value='2000'>重庆市</option>
+          <option value='2500'>广东省</option>
+          <option value='3000'>福建省</option>
+          <option value='3500'>浙江省</option>
+          <option value='4000'>江苏省</option>
+          <option value='4500'>山东省</option>
+          <option value='5000'>辽宁省</option>
+          <option value='5500'>江西省</option>
+          <option value='6000'>四川省</option>
+          <option value='6500'>陕西省</option>
+          <option value='7000'>湖北省</option>
+          <option value='7500'>河南省</option>
+          <option value='8000'>河北省</option>
+          <option value='8500'>山西省</option>
+          <option value='9000'>内蒙古</option>
+          <option value='9500'>吉林省</option>
+          <option value='10000'>黑龙江</option>
+          <option value='10500'>安徽省</option>
+          <option value='11000'>湖南省</option>
+          <option value='11500'>广西区</option>
+          <option value='12000'>海南省</option>
+          <option value='12500'>云南省</option>
+          <option value='13000'>贵州省</option>
+          <option value='13500'>西藏区</option>
+          <option value='14000'>甘肃省</option>
+          <option value='14500'>宁夏区</option>
+          <option value='15000'>青海省</option>
+          <option value='15500'>新疆区</option>
+          <option value='16000'>香港区</option>
+          <option value='16500'>澳门区</option>
+          <option value='17000'>台湾省</option>
+        </select>
+        <select id="city" name="city">
+          <option value='0'>具体地区</option>
+        </select>
+        
+        <input class="text" name="minage" type="text" id="minage" value="18" style="width:20px" />
+        -
+        <input class="text" name="maxage" type="text" id="maxage" value="35" style="width:20px" />
+        岁
+        <input type="radio" name="sex" id="radio1" value="男" />
+        男
+        <input name="sex" type="radio" id="radio2" value="女" />
+        女
+        <input name="sex" type="radio" id="radio3" value="" checked="checked" />
+        不限
+        <button class="button2 mL10" type="submit">搜索</button>
+      </form>
+    </div>
+    <div class="item search">
+      <div class="itemHead" >
+        <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=lyh5719' target='_blank'><img class="lineBorder mR10" align="top" src='images/nopic.gif' width='32' height='32'/></a> <a href='index.php?uid=lyh5719' target='_blank'>lyh5719</a></span> <span class="itemTip mL10">(
+          此人什么都不想说...                )</span></div>
+          <div class="fRight"><a href='index.php?uid=lyh5719&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=lyh5719&action=guestbook' target='_blank'>[留言]</a></div>
+        </div>
+        <div class="itemBody invisible" >
+          <div class="itemContent">
+            <ul class="mL10 mT10">
+              <li>2016岁&nbsp;男</li>
+              <li>最后登录:2016-06-26</li>
+            </ul>
+          </div>
+          <div class="itemBodyFoot"></div>
+        </div>
+      </div>
+      <hr class="dotted" />
+      <div class="item search">
+        <div class="itemHead" >
+          <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=与你花间相依一生' target='_blank'><img class="lineBorder mR10" align="top" src='images/nopic.gif' width='32' height='32'/></a> <a href='index.php?uid=与你花间相依一生' target='_blank'>与你花间相依一生</a></span> <span class="itemTip mL10">(
+            此人什么都不想说...                )</span></div>
+            <div class="fRight"><a href='index.php?uid=与你花间相依一生&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=与你花间相依一生&action=guestbook' target='_blank'>[留言]</a></div>
+          </div>
+          <div class="itemBody invisible" >
+            <div class="itemContent">
+              <ul class="mL10 mT10">
+                <li>36岁&nbsp;女</li>
+                <li>最后登录:2016-06-26</li>
+              </ul>
+            </div>
+            <div class="itemBodyFoot"></div>
+          </div>
+        </div>
+        <hr class="dotted" />
+        <div class="item search">
+          <div class="itemHead" >
+            <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=邪雨' target='_blank'><img class="lineBorder mR10" align="top" src='images/nopic.gif' width='32' height='32'/></a> <a href='index.php?uid=邪雨' target='_blank'>邪雨</a></span> <span class="itemTip mL10">(
+              此人什么都不想说...                )</span></div>
+              <div class="fRight"><a href='index.php?uid=邪雨&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=邪雨&action=guestbook' target='_blank'>[留言]</a></div>
+            </div>
+            <div class="itemBody invisible" >
+              <div class="itemContent">
+                <ul class="mL10 mT10">
+                  <li>24岁&nbsp;男</li>
+                  <li>最后登录:2016-06-26</li>
+                </ul>
+              </div>
+              <div class="itemBodyFoot"></div>
+            </div>
+          </div>
+          <hr class="dotted" />
+          <div class="item search">
+            <div class="itemHead" >
+              <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=guang56' target='_blank'><img class="lineBorder mR10" align="top" src='/upimg/userup/1/myface.jpg' width='32' height='32'/></a> <a href='index.php?uid=guang56' target='_blank'>guang56</a></span> <span class="itemTip mL10">(
+                此人什么都不想说...                )</span></div>
+                <div class="fRight"><a href='index.php?uid=guang56&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=guang56&action=guestbook' target='_blank'>[留言]</a></div>
+              </div>
+              <div class="itemBody invisible" >
+                <div class="itemContent">
+                  <ul class="mL10 mT10">
+                    <li>34岁&nbsp;男</li>
+                    <li>最后登录:2016-06-26</li>
+                  </ul>
+                </div>
+                <div class="itemBodyFoot"></div>
+              </div>
+            </div>
+            <hr class="dotted" />
+            <div class="item search">
+              <div class="itemHead" >
+                <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=云上云上' target='_blank'><img class="lineBorder mR10" align="top" src='http://bbs.duwenzhang.com/uc_server/avatar.php?uid=315826&size=middle' width='32' height='32'/></a> <a href='index.php?uid=云上云上' target='_blank'>云上云上</a></span> <span class="itemTip mL10">(
+                  此人什么都不想说...                )</span></div>
+                  <div class="fRight"><a href='index.php?uid=云上云上&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=云上云上&action=guestbook' target='_blank'>[留言]</a></div>
+                </div>
+                <div class="itemBody invisible" >
+                  <div class="itemContent">
+                    <ul class="mL10 mT10">
+                      <li>36岁&nbsp;女</li>
+                      <li>最后登录:2016-06-26</li>
+                    </ul>
+                  </div>
+                  <div class="itemBodyFoot"></div>
+                </div>
+              </div>
+              <hr class="dotted" />
+              <div class="item search">
+                <div class="itemHead" >
+                  <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=123456梦家园' target='_blank'><img class="lineBorder mR10" align="top" src='images/nopic.gif' width='32' height='32'/></a> <a href='index.php?uid=123456梦家园' target='_blank'>123456梦家园</a></span> <span class="itemTip mL10">(
+                    此人什么都不想说...                )</span></div>
+                    <div class="fRight"><a href='index.php?uid=123456梦家园&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=123456梦家园&action=guestbook' target='_blank'>[留言]</a></div>
+                  </div>
+                  <div class="itemBody invisible" >
+                    <div class="itemContent">
+                      <ul class="mL10 mT10">
+                        <li>54岁&nbsp;女</li>
+                        <li>最后登录:2016-06-26</li>
+                      </ul>
+                    </div>
+                    <div class="itemBodyFoot"></div>
+                  </div>
+                </div>
+                <hr class="dotted" />
+                <div class="item search">
+                  <div class="itemHead" >
+                    <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=最冷不过人心' target='_blank'><img class="lineBorder mR10" align="top" src='http://qzapp.qlogo.cn/qzapp/222758/2A416D6D19B9E251D0B183E86A0FB890/50' width='32' height='32'/></a> <a href='index.php?uid=最冷不过人心' target='_blank'>最冷不过人心</a></span> <span class="itemTip mL10">(
+                      此人什么都不想说...                )</span></div>
+                      <div class="fRight"><a href='index.php?uid=最冷不过人心&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=最冷不过人心&action=guestbook' target='_blank'>[留言]</a></div>
+                    </div>
+                    <div class="itemBody invisible" >
+                      <div class="itemContent">
+                        <ul class="mL10 mT10">
+                          <li>36岁&nbsp;男</li>
+                          <li>最后登录:2016-06-26</li>
+                        </ul>
+                      </div>
+                      <div class="itemBodyFoot"></div>
+                    </div>
+                  </div>
+                  <hr class="dotted" />
+                  <div class="item search">
+                    <div class="itemHead" >
+                      <div class="fLeft"> <span class="itemHeadTitle yellow"> <a href='http://www.duwenzhang.com/member/index.php?uid=成效' target='_blank'><img class="lineBorder mR10" align="top" src='images/nopic.gif' width='32' height='32'/></a> <a href='index.php?uid=成效' target='_blank'>成效</a></span> <span class="itemTip mL10">(
+                        有共同情趣的人                )</span></div>
+                        <div class="fRight"><a href='index.php?uid=成效&action=infos' target='_blank'>[资料]</a> <a href='index.php?uid=成效&action=guestbook' target='_blank'>[留言]</a></div>
+                      </div>
+                      <div class="itemBody invisible" >
+                        <div class="itemContent">
+                          <ul class="mL10 mT10">
+                            <li>2016岁&nbsp;男</li>
+                            <li>最后登录:2016-06-26</li>
+                          </ul>
+                        </div>
+                        <div class="itemBodyFoot"></div>
+                      </div>
+                    </div>
+                    <hr class="dotted" />
+                    <div>
+                      <div class="pages fRight"><div class="pagelistbox">
+                        <span>共 38454 页/307627条记录 </span><span class='indexPage'>首页 
+                      </span><strong>1</strong>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=2'>2</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=3'>3</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=4'>4</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=5'>5</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=6'>6</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=7'>7</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=8'>8</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=9'>9</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=10'>10</a>
+                      <a href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=11'>11</a>
+                      <a class='nextPage' href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=2'>下页</a> 
+                      <a class='endPage' href='/member/search.php?keyword=&province=0&city=0&minage=0&maxage=0&sex=&totalresult=307627&pageno=38454'>末页</a> 
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <include file="Person:footer" />

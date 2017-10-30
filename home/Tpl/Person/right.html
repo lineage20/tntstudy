@@ -1,0 +1,47 @@
+<div class="dedeRight">
+	<!--信息统计 -->
+	<div class="titleBar bgGaryImg">
+		<h5 class="fLeft">个人统计</h5>
+	</div>
+	<dl class="statistics overflow mL10 mR10">
+		<dt>总积分：</dt>
+		<dd>{$user_info['total']}</dd>
+		<dt>可用积分：</dt>
+		<dd>{$user_info['points']}</dd>
+		<dt>文章发表总数：</dt>
+		<dd>{$user_article}</dd>
+		<dt>文章点击总数：</dt>
+		<dd><?php if($user_article1!=null){ echo $user_article1 ;}else{ echo '0' ;}?></dd>
+		<dt>文章收藏总数：</dt>
+		<dd><?php if($user_article4!=null){ echo $user_article4 ;}else{ echo '0' ;}?></dd>
+		<dt>文章评论总数：</dt>
+		<dd><?php if($user_article3!=null){ echo $user_article3 ;}else{ echo '0' ;}?></dd>
+		<dt>文章推荐总数：</dt>
+		<dd><?php if($user_article2!=null){ echo $user_article2 ;}else{ echo '0' ;}?></dd>
+		</dl>
+		<div class="clear"></div>
+
+<!--  <div class="titleBar bgGaryImg">
+ <h5 class="fLeft">好友列表 | <a href="{:U('home/Person/trends')}"><font color="red"><u>好友动态</u></font></a></h5>
+ <span class="fRight"><a href="{:U('home/Person/myfriend')}" title="好友管理">管理</a></span> </div>
+ <dl class="buddy overflow mL10 mR10">
+ <dt class="buddySort icon"><a href="{:U('home/Person/myfriend')}">所有好友</a></dt>
+ <dd class="buddyList">
+ <ul>
+  </ul>
+ </dd>
+ <dt class="buddySort icon"><a href="{:U('home/Person/myfriend')}">特别关注</a></dt>
+ <dt class="buddySort icon"><a href="{:U('home/Person/myfriend')}">黑名单</a></dt>
+ </dl>
+ <hr /> -->
+ <!--好友搜索 -->
+ <!-- <div class="buddySearch textCenter">
+ <form action="{:U('home/Person/myfriend_search')}">
+ <input class="text" type="text" name="keyword" value="" style="width:100px;" />
+ <button class="button5" type="submit">搜索会员</button>
+ </form>
+</div> -->
+</div>
+<div class="clear"></div>
+</div>
+</div>

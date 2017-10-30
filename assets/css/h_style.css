@@ -1,0 +1,150 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	}
+body{
+	color:#333;
+	font-family:"微软雅黑",Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+	font-size:12px;
+	background:#f5f5f5;
+	}
+.ziti_song{
+	font-family:"宋体",Arial, Helvetica, sans-serif;
+	}
+.zi_999{
+	color:#999;
+	}
+.zi_red{
+	color:#ff4b37;
+	}
+.zi_bai{
+	color:#fff;
+	}
+.zi_666{
+	color:#666;
+	}
+.zi_333{
+	color:#333;
+	}
+.zi_blue{
+	color:#7299bb;
+	}
+.zi_lan{
+	color:#09f;
+	}
+.ziti_hei{
+	font-family:"黑体";
+	}
+.size14{
+	font-size:14px;
+	}
+.spacer{
+	clear:both; font-size:0; line-height:0;
+	} 
+img{
+	border:0;
+	}
+ul{list-style-type:none;}
+ul.h li{
+	float:left;
+	display:inline;
+	}
+ul.h li a{
+	display:block;
+	}
+a{
+	text-decoration:none;
+	color:#333;
+	}
+a:hover{
+	color:#e67216;
+	}
+h1{
+	font-size:24px;
+	}
+.fl{
+	float:left;
+	}
+.fr{
+	float:right;
+	}
+i,em,ins{
+	font-style:normal;
+	text-decoration:none;
+	}
+/*---------------公共部分-------------*/
+.h_bg{
+	background:url(../img/h_bg.jpg) center top no-repeat;
+	background-size:100%,auto;
+	}
+.h_logo{
+	margin:0 auto;
+	margin-top:190px;
+	width:182px;
+	}
+.h_d1{
+	width:245px;
+	height:50px;
+	line-height:50px;
+	background:#fff url(../img/h_login_06.png) 15px 10px no-repeat;
+	padding-left:35px;
+	border:#19b0ff solid 1px;
+	border-radius:3px;
+	}
+.h_d2{
+	width:245px;
+	height:50px;
+	line-height:50px;
+	background:#fff url(../img/h_login_06.png) 15px -45px no-repeat;
+	padding-left:35px;
+	border:#19b0ff solid 1px;
+	border-radius:3px;
+	
+	}
+.h_d3{
+
+	width:245px;
+	height:40px;
+	}
+	
+.h_d3 input{
+	height:40px;
+	width: 100px;
+	border:none;
+}
+.h_d1 input,.h_d2 input {
+	border:none;
+	background:none;
+	height:50px;
+    margin-left: 30px;
+width: 200px;
+font-size: 18px;
+font-weight: bold;
+color: rgb(102, 102, 102);
+	}
+.h_dl{
+	width: 500px;
+margin: 20px auto 0px;
+height: auto;
+	}
+.h_dl table{
+	width:605px;
+	padding:10px;
+	}
+a.h_d3{
+	background:url(../img/h_denglu_03.png) 0 0 no-repeat;
+	width:71px;
+	height:71px;
+	display:block;
+	text-indent:-2000px;
+	overflow:hidden;
+    margin-top: 27px;
+float: left;
+	}
+a.h_d3:hover{
+	background:url(../img/h_denglu_03.png) 0 -81px no-repeat;
+	}

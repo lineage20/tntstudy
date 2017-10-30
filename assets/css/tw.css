@@ -1,0 +1,16 @@
+﻿/*@font-face{
+    font-family:'FZLT';
+    /*src:local('Open Sans Light'),
+        local('OpenSans-Light');* /
+    src: url('../font/FZLTXH.eot');
+    src: url('../font/FZLTXH.eot?#iefix') format('embedded-opentype'),
+         url('../font/FZLTXH.woff') format('woff');
+      
+   }*/
+
+body {
+    font-family: "FZLT";
+}
+
+
+

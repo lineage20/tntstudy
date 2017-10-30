@@ -1,0 +1,238 @@
+.main-left{width:700px;height:385px;float:left}
+.main-right{width:250px;height:385px;float:right}
+.slide{width:350px;height:325px;overflow:hidden;background:url(../images/comlimi_slide.jpg) no-repeat scroll 0% 0% transparent;}
+.tempWrap ul li{position:relative;}
+
+.slideBox{width:340px;height:309px;padding:5px 5px 0px;overflow:hidden;position:relative}
+.slideBox .hd{width:338px;height:10px;overflow:hidden;position:absolute;bottom:0;z-index:1;border-top:8px solid #FFF;border-bottom:2px solid #FFF;border-left:4px solid #FFF;}
+.slideBox .hd ul{width:340px;overflow:hidden;zoom:1;float:left;margin:0}
+.slideBox .hd ul li{float:left;width:14.3%;height:10px;text-align:center;background:0;cursor:pointer;background:#D4D4D4;border-right:8px #FFF solid;}
+.slideBox .hd ul li.on{background:#757670;color:#FFF;transition:background 0.8s;}
+.slideBox .bd{position:relative;height:100%;z-index:0}
+.slideBox .bd img{width:100%;height:290px;}
+.slideBox .text{width:340px;height:auto;background-color:rgba(0,0,0,0.40);FILTER:alpha(opacity=80);opacity:0.8;-moz-opacity:0.8;position:absolute;left:0px;bottom:0px;}
+.slideBox .bt{width:340px;height:42px;}
+.slideBox .bt span{display:block;}
+.slideBox .pa{width:325px;line-height:30px;height:30px;font-size:18px;color:#FFF;text-shadow:1px 1px 0px #000;font-weight:bold;letter-spacing:0.5px;padding:3px 0 0 10px;overflow:hidden;}
+.slideBox .clear{display:block;font-size:0px;height:0px;height:0px;line-height:0px;clear:both;}
+.slideBox .btxt{width:325px;height:70px;line-height:22px;padding:0px 10px 20px;color:#FFF;text-shadow:1px 1px 1px #000;text-align:justify;font-size:14px;}
+
+.comlimi_new{width:352px;height:325px;border-right:1px solid #f0f9e0;}
+.comlimi_new .top{width:328px;margin:4px 12px;}
+.comlimi_new .top h2{width:328px;padding:0px 0px 8px;margin:0px;overflow:hidden;line-height:25px;height:25px;font-size:20px;font-weight:normal;display:block;}
+.comlimi_new .top h2 a{color:#808479;padding:0 0 0 78px;line-height:25px;height:25px;display:block;background:url(../images/comlimi_week_tuijian.png) no-repeat scroll 0px 0px transparent;overflow:hidden;}
+.comlimi_new .top p{width:328px;height:75px;padding:5px 0px 6px;margin:0px;text-align:justify;line-height:26px;border-top:1px dotted #CCC;border-bottom:1px dotted #ccc;font-size:14px;font-weight:normal;text-indent:1em;color:#888;overflow:hidden}
+.comlimi_new .box{width:352px;height:200px;background:url(../images/comlimi_new_top.jpg) no-repeat scroll right bottom transparent;}
+.comlimi_new .box ul{padding:0px 15px;overflow:hidden;}
+.comlimi_new .box li{width:310px;color:#808479;line-height:28px;height:28px;overflow:hidden;font-size:14px;font-weight:normal;background:url(../images/comlimi_list.gif) no-repeat scroll 0px 10px transparent;padding:0px 0px 0px 15px;}
+.comlimi_new .box li span{padding:0 5px 0 0;margin:0px;}
+.comlimi_new .box a{color:#555;outline:medium none;}
+.comlimi_new .top h2 a:hover,.comlimi_new .box a:hover,#user_login .comlimi_title span a:hover,.comlimi_notice .comlimi_title span a:hover,.category .item .top h4 a:hover,.member .info a:hover,.scores ul a:hover,.diary-list .box a:hover{color:#f60;}
+.comlimi_new .box li span a,.comlimi_new .box li span a:hover,.comlimi_notice .comlimi_title h3 a,.comlimi_notice .comlimi_title h3 a:hover,.category .item a.item-color{color:#808479;padding:0px 1px;}.user{width:250px;height:325px;float:right;display:inline;overflow:hidden}
+
+.user #user_login{padding-left:0px;margin:0px 0px 0px 15px;overflow:hidden;}
+.user #user_login .comlimi_title span,.comlimi_notice .comlimi_title span{float:right;line-height:35px;}
+.user #user_login .comlimi_title span a{color:#78b10a}
+.user .login{width:230px;height:80px;margin-top:10px}
+.user .login li{padding:6px 0;overflow:hidden}
+.user .login li span{width:40px;float:left;color:#757670;height:28px;line-height:28px;font-size:16px}
+.user .login li input{width:152px;height:26px;line-height:26px;border-radius:3px;padding:0 5px;font-family:Microsoft Yahei;border:1px dashed #73AA26;background:transparent url(../images/comlimi_button.gif) repeat-x scroll left center;border:1px solid #DEDEDE}
+.user .login li input:focus{border:1px solid #757670;background:#FFF}
+.user dl{width:230px;margin:10px auto 10px;}
+.user dl button{width:80px;height:26px;font:14px/24px Arial,serif;background-color:#FFF;color:#666;border:1px solid #DEDEDE;cursor:pointer;margin:0 5px;margin:0 5px;border-radius:3px;background:transparent url(../images/comlimi_button.gif) repeat-x scroll left center;border:1px solid #DEDEDE}
+.user dl .login_btn:hover{background-color:#757670;transition:.2s;color:#FFF}
+.user dl .login-qqbtn{width:130px;height:30px;background:url(../images/qq_login_more.gif) no-repeat scroll 0 1px transparent;float:right}
+
+.userinfo .loginafter{width:235px;height:58px;overflow:hidden;margin:10px 0 0 5px}
+.userinfo .loginafter dt{width:56px;height:56px;border-radius:100%;border:1px solid #EDEEE6;overflow:hidden;text-align:center;float:left}
+.userinfo .loginafter dt img{width:56px;height:56px}
+.userinfo .loginafter dd{height:58px;margin-left:65px}
+.userinfo .loginafter p{width:150px;height:28px;margin:0px 0px 0px 7px;overflow:hidden;}
+.userinfo .loginafter p span{color:#757670;font-size:16px;overflow:hidden;}
+.userinfo .loginafter p a.lgbtn{width:72px;height:28px;line-height:28px;display:inline-block;font-size:14px;color:#fff;text-align:center;background-color:#757670;border-radius:3px;}
+.userinfo .loginafter p a.lgbtn:hover,.userinfo .mylink li a:hover,.head_right a:hover,.validation img:hover{opacity:0.7;filter:alpha(opacity=70)}
+.userinfo .userlink{width:235px;height:66px;overflow:hidden;margin:0 auto;margin-top:5px}
+.userinfo .userlink li{width:33%;height:28px;float:left;margin:3px 0}
+.userinfo .userlink li a{display:inline-block;width:72px;height:26px;line-height:26px;font-size:13px;color:#666;background:url(../images/comlimi_userinfo_btn.jpg) no-repeat;text-align:center}
+
+.comlimi_notice{height:157px;padding-left:0px;margin:0px 0px 0px 15px;overflow:hidden;}
+.comlimi_notice .comlimi_title span a{color:#78b10a;padding-left:16px;font-size:14px;font-weight:normal;}
+.comlimi_notice .box{width:235px;max-height:115px;padding:0px;margin:5px 0px 0px;}
+.comlimi_notice .box li{width:220px;height:28px;line-height:28px;overflow:hidden;}
+.comlimi_notice .box li a,.ranking ul li a,.right-item .box li a{display:block;height:28px;line-height:28px;font-size:14px;font-weight:normal;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+
+.main-left .comlimi_title,.comlimi_notice .comlimi_title,#user_login .comlimi_title,.ranking .comlimi_title,.scores .comlimi_title,.member-left .comlimi_title,.pic-title,.diary-title,.link-title,.article-left .comlimi_title,.right-item .comlimi_title,.listpic .comlimi_title,.huati .comlimi_title{height:35px;line-height:35px;border-bottom:2px solid #EDEEE6}
+.main-left .comlimi_title span,.member-left .comlimi_title span,.pic-title span,.diary-title span,.link-title span,.article-left .comlimi_title span,.article-left .comlimi_title ul,.listpic .comlimi_title span,.huati .comlimi_title span{font-size:14px;color:#666;float:right;display:block;}
+.main-left .comlimi_title span li,.member-left .comlimi_title span li,.pic-title span li,.diary-title span li,.link-title span li,.main-left .comlimi_title span li a,.member-left .comlimi_title span li a,.diary-title span li a,.article-left .comlimi_title span li,.article-left .comlimi_title span li a{height:35px;line-height:35px;float:right;display:block;}
+.main-left .comlimi_title span a,.diary-title span a,.link-title span a,.article-left .comlimi_title span a{margin:0 6px;padding:0px;}
+.main-left .comlimi_title span a:hover,.diary-title span a:hover,.article-left .comlimi_title span a:hover,.item-box .comlimi_ta h4 a,.item-box .comlimi_ta h4 a:hover,.item-box .comlimi_ta h2 a,.item-box .comlimi_ta h2 a:hover,.left-item li .lb a:hover,.content .info span a:hover{color:#808479;}
+.main-left .comlimi_title span li:hover,.diary-title span li:hover,.article-left .comlimi_title span li:hover{border-bottom:2px solid #808479;}
+
+.member-left{width:700px;height:245px;float:left}
+.member{width:700px;overflow:hidden;border-bottom:1px solid #e3efc5}
+.member .info{height:197px;float:left;overflow:hidden;margin-left:5px;margin-top:10px}
+.member .info a,.scores ul a{color:#699069;line-height:28px;height:28px;overflow:hidden}
+.member .info ul{margin:10px 0 0 8px}
+.member .info li{text-align:center;padding:0;margin:5px 6px;width:65px;display:inline;float:left;height:85px;overflow:hidden}
+.member .info li h5{height:20px;line-height:20px;font-size:14px;font-weight:normal;text-align:center;overflow:hidden}
+.member .info li img{width:57px;height:57px;border-radius:100%;border:1px solid #EDEEE6;padding:3px;display:block;}
+.member .info li img:hover{padding:0px;width:64px;height:65px;opacity:0.7;border:0px solid #FFF;}
+.member-right{width:250px;height:245px;float:right}
+
+.scores ul{padding:4px 0px 6px;border-bottom:1px solid #e3efc5}
+.scores ul li,.scores ul li a{height:28px;line-height:28px;font-size:14px;font-weight:normal;overflow:hidden;display:block;}
+.scores ul span{height:28px;line-height:28px;font-family:Georgia,serif;float:right;color:#999;overflow:hidden;}
+
+#pic{width:960px;margin:10px auto 0;padding-bottom:5px;position:relative;overflow:hidden;_height:100%;border-bottom:1px solid #e3efc5}
+#picbox{width:960px;height:155px;overflow:hidden;text-align:center;position:relative}
+#picbox td{width:180px;height:140px;position:relative;background-color:#FFF;}
+#picbox td img{width:180px;height:140px;border-radius:5px;padding:2px;margin:0 4px;border:1px solid #CCC;box-shadow:0px 1px 1px #EEE;display:block;}
+#picbox td img:hover{width:180px;height:140px;border:1px solid #808479;box-shadow:0px 1px 1px #808479;opacity:0.6;filter:alpha(opacity=60);transition:0.5s;}
+#picbox td p{width:170px;height:28px;left:7px;bottom:3px;color:#FFF;text-shadow:1px 1px 0px #000;padding:0 5px;background-color:rgba(0,0,0,0.4);font:14px/28px Microsoft Yahei,serif;position:absolute;text-align:center;display:block;overflow:hidden;}
+
+.diary{width:960px;margin-top:20px;padding-bottom:5px;overflow:hidden}
+.diary .one,.diary .two{height:268px;width:475px}
+
+.one .pic{background-position:-159px 0}
+.two .pic{background-position:-477px 291px}
+.one .pic:hover{background-position:0 0}
+.two .pic:hover{background-position:-318px 291px}
+.one .pic,.one .pic:hover,.two .pic,.two .pic:hover{background-image:url(../images/comlimi_diary.jpg);display:block;float:left;height:268px;width:159px}
+
+.diary-list{background-image:url(../images/comlimi_diary_list.png);background-repeat:no-repeat;float:right;height:268px;width:316px}
+.diary-list .comlimi_title,.diary-list .comlimi_title a{color:#808479;font-size:16px;line-height:40px;margin-bottom:5px;margin-left:10px;margin-right:10px}.diary-list .comlimi_title span{float:right;font-size:14px;padding-right:10px}
+.diary-list .comlimi_title span a{color:#AAA}
+.diary-list .box{display:block;list-style-type:none;margin:0 15px 0 0;padding:0 0 0 20px}
+.diary-list .box li{height:30px;line-height:30px;border-bottom:1px dotted #CCC}
+.diary-list .box li.num{padding-left:3px;font:16px/30px Microsoft Yahei;color:#666;list-style:decimal;}
+.diary-list .box a{color:#666;font-size:14px}
+.diary-list .box li:hover{color:#808479;border-bottom:1px dashed #808479;transition:border-bottom 3s;}
+
+.friendlink{width:958px;margin-top:10px;overflow:hidden}
+.friendlink ul{border-top:0}
+.friendlink li{float:left;padding:0 6px;height:26px;line-height:26px;}
+.friendlink li a{height:26px;line-height:26px;display:inline-block;font-size:14px;font-weight:normal;}
+
+.validation{width:125px;height:47px;margin-top:5px;float:right;overflow:hidden}
+.article-left{width:690px;float:left;overflow:hidden}
+.article-right{width:250px;float:right;overflow:hidden}
+.article-left .comlimi_title ol{display:inline;float:left;margin:0 10px}
+.article-left #like{margin:20px 10px 0px;text-align:center;padding:0px 0px 0px 280px;overflow:hidden;}
+
+.index-item,.list-item{width:690px;overflow:hidden}
+.item-box{width:333px;float:left;background:#FFF;background:url(../images/comlimi_toolbar.gif) repeat-x scroll 0 -1px transparent;margin:10px 10px 0px 0px;border:1px solid #E9F5DE}
+.index-item .item-box-y{float:right;}
+.item-box .comlimi_ta,.item-box .comlimi_ta a{width:333px;height:40px;line-height:40px;display:block;overflow:hidden;border-bottom:1px solid #E9F5DE}.item-box .comlimi_ta h4,.item-box .comlimi_ta h2{width:280px;float:left;font-size:16px;padding:0 0 0 18px;font-weight:normal;}
+.item-box .comlimi_tb{width:303px;margin:0px 15px;padding:8px 0px;border-bottom:1px dashed #b1cf62;overflow:hidden;}
+.item-box .comlimi_tb h4,.item-box .comlimi_tb h4 a{width:303px;line-height:24px;height:24px;font-size:16px;font-weight:normal;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.item-box .comlimi_tb p{width:303px;margin:8px 0px 2px;text-align:justify;line-height:23px;height:46px;color:#AAA;overflow:hidden;}.
+.item-box .comlimi_tc{margin:0px 15px;padding:10px 0px 10px;overflow:hidden;}
+.item-box .comlimi_tc li{font-size:14px;height:32px;line-height:32px;border-bottom:1px dashed #e4f0c2;background:url(../images/comlimi_list.gif) no-repeat scroll 0px 12px transparent;padding:0 0 0 15px;overflow:hidden;}
+.item-box .comlimi_tc li a{font-size:14px;height:32px;line-height:32px;border-bottom:1px dashed #e4f0c2;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.item-box .pic img{width:303px;filter:alpha(opacity=70);opacity:.7;transition:all 1.2s ease 0s;-moz-transition:all 1.2s ease 0s;-o-transition:all 1.2s ease 0s;-webkit-transition:all 1.2s ease 0s;}
+.item-box .pic img:hover{opacity:1;filter:alpha(opacity=100);transition:all 1.2s linear;-moz-transition:all 1.2s linear;-o-transition:all 1.2s linear;-webkit-transition:all 1.2s linear;-webkit-transform:scale(1.12);-moz-transform:scale(1.12);-o-transform:scale(1.12);-m-transform:scale(1.12);transform:scale(1.12);}
+.item-box .pic{width:303px;overflow:hidden;height:120px;margin:0;position:relative}
+.item-box .pic h4{z-index:1;background:rgba(0,0,0,.54);width:283px;padding:0 10px;height:30px;line-height:30px;color:#fff;font-size:14px;font-weight:400;text-shadow:1px 1px 0 #000;position:absolute;bottom:0;overflow:hidden;white-space:nowrap;display:block;text-overflow:ellipsis}
+
+.left-item,.new-item{padding:10px 10px 0px 5px;margin:0px}
+.left-item li{padding:5px 0;}
+.left-item li .la{height:28px;line-height:28px;overflow:hidden}
+.left-item li .lb{padding:0;margin:0;height:28px;line-height:28px;padding-bottom:5px;text-align:right;border-bottom:1px dashed #B1CF62;color:#999;}
+.left-item li .la span,.left-item li .lb a,.left-item li .lb span,.new-item li dl{color:#AAA;margin:0px 0px 0px 5px;font-size:14px;font-family:Georgia,serif;height:28px;line-height:28px;display:inline-block;overflow:hidden}
+.left-item li .lb .c60{color:#808479;}
+.left-item li h3,.new-item li h4{width:535px;float:left;font-size:18px;font-weight:300;height:28px;line-height:28px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.left-item li h3 a,.new-item li h4 a{color:#3CB469}
+.left-item li p{line-height:24px;font-size:14px;text-align:justify;letter-spacing:1px;padding:5px 0px 0px;color:#999;overflow:hidden}
+
+.new-item li{height:30px;padding:10px 0 10px;border-bottom:1px dashed #b1cf62}
+.new-item li span,.new-item li span a,.new-item li span a:hover{color:#3C88C0;padding:0 2px;}
+.new-item li h4{width:540px;}.listpic,.huati{padding:5px 0px 5px;margin:0px;min-height:500px}
+
+.listpic .comlimi_title span h1{font-size:14px;color:#666;font-weight:normal;display:inline-block;}
+.listbom{padding:10px 0px 10px;text-align:center;padding-left:405px;}
+.listpic .box{width:962px;}
+.listpic .box ul{padding:15px 0px 0px 10px;margin:0px;overflow:hidden;}
+.listpic .box ul li{width:226px;height:177px;background:url(../images/comlimi_list_pic.jpg) no-repeat scroll 0% 0% transparent;display:inline;float:left;margin-right:12px;margin-bottom:18px}
+.listpic .box ul li img{width:216px;height:164px;padding:4px;display:block;}
+.listpic .box ul li img:hover{display:block;opacity:0.6;filter:alpha(opacity=60);transition:0.4s;}
+.listpic .box ul a{position:absolute;display:block;padding:0}
+.listpic .box ul a span{font:14px/30px Arial,serif;width:212px;height:30px;padding:0px 2px;text-align:center;left:4px;bottom:3px;color:#fff;background-color:rgba(0,0,0,0.4);text-shadow:1px 1px 0px #000;display:block;position:absolute;overflow:hidden;}
+.listpic .box ul a:hover span{background-color:rgba(109,164,3,0.74);transition:0.5s;}
+
+.huati .box{width:962px;overflow:hidden;margin:15px 0px;}
+.huati .box a{float:left;text-align:center;border-bottom:1px dotted #A0A0A0;border-right:1px dotted silver;height:35px;line-height:35px;padding-left:1%;padding-right:1%}
+.huati a:hover{cursor:pointer;color:#719D00;background:#FFF;}
+
+.color1{background-color:#fdcce5;color:#9004A5;}
+.color2{background-color:#e5ccfc;color:#1F41B9;}
+.color3{background-color:#cbd2fd;color:#000000;}
+.color4{background-color:#e0fdc4;color:#D5001E;}
+.color5{background-color:#bdfdbd;color:#56951B;}
+.color6{background-color:#fcfcbc;color:#00A879;}
+.color7{background-color:#fbd4c1;color:#FF6C00;}
+.color8{background-color:#d6f8f8;color:#000000;}
+.color9{background-color:#B9B9B9;color:#FFFFFF;}
+.color10{background-color:#EDEDED;color:#555555;}
+
+#right-box{float:left;position:relative;width:250px}.item1{width:250px}.item2{position:fixed;_position:absolute;top:0;z-index:250}.AD-960{text-align:center;margin:10px auto}
+.AD-640{text-align:center;padding:15px 0 10px;}
+.AD-680{text-align:center;padding:10px 0px 0px;margin-right:10px;}
+.AD-list{text-align:center;padding:10px 0px 0px;}
+.AD-300{overflow:hidden;float:right;margin-left:5px;padding:7px 5px;background:#FFF}
+
+.comlimi_content{padding:0px 10px 0px 0px;margin:0px;overflow:hidden}
+.comlimi_content ._comlimi_title{height:70px;line-height:70px;text-align:center;overflow:hidden;padding:5px 0px 5px 20px;white-space:nowrap;text-overflow:ellipsis;background:url(../images/comlimi_article_title_bg.png) no-repeat scroll 0px 0px transparent;}
+.comlimi_content ._comlimi_title h1{color:#757670;font-size:24px;font-weight:bold;text-align:center;display:inline;}
+.comlimi_content .comlimi_info{height:35px;line-height:35px;text-align:center;background:#FDFFF7;color:#555;padding:0px 5px;border:1px solid #EDEDED;box-shadow:1px 1px 0px #EDEDED;overflow:hidden}
+.comlimi_content .comlimi_info span,.comlimi_content .comlimi_info span a{height:19px;line-height:19px;display:inline-block;font-size:14px;margin:0px 5px 0px 0px;color:#999;}
+
+.handover{padding:10px 0px 15px;text-align:center}.handover .box{height:45px;line-height:45px;margin:0 auto;overflow:hidden;width:320px}.handover .box a{text-decoration:none}
+.handover .prev,.handover .next,.handover .noprev,.handover .nonext{height:43px;width:129px}.handover .prev:hover,.handover .next:hover,.handover .noprev:hover,.handover .nonext:hover{opacity:0.8;filter:alpha(opacity=80)}
+.handover .prev,.handover .next,.handover .noprev,.handover .nonext,.handover .rand,.handover .rand:hover{background-image:url(../images/comlimi_article_handover.png);background-repeat:no-repeat;background-attachment:scroll;background-color:transparent;}
+.handover .prev{background-position:0px 2px;padding-right:10px;display:block;overflow:hidden;float:left;text-indent:-999em}
+.handover .next{background-position:-211px 2px;display:block;overflow:hidden;float:right;text-indent:-999em}
+.handover .noprev{background-position:0px -58px;padding-right:10px;cursor:help;display:block;float:left;overflow:hidden;text-indent:-999em}
+.handover .nonext{background-position:-211px -58px;cursor:help;display:block;float:right;overflow:hidden;text-indent:-999em}
+.handover .rand{background-position:-149px 1px;height:45px;width:45px;display:block;overflow:hidden;float:left;text-indent:-999em}
+.handover .rand:hover{background-position:-149px -57px;}
+
+.likepic{background:#FFF;border:none;margin-right:0px;line-height:30px;margin-top:0px;margin-bottom:5px;overflow:hidden}
+.listpic a.breadcrumb{font-size:16px;background:url(../images/comlimi_breadcrumb-right.png) no-repeat right center;margin-right:5px;padding-right:12px;}
+.listpic .comlimi_title em{font-size:14px;}
+.likepic .top{height:35px;line-height:35px;border-bottom:2px solid #cee4c0;margin-left:0px;margin-right:0px;}
+.likepic .top h3{float:left;line-height:35px;border-bottom:2px solid #808479;font-size:18px;font-weight:normal;color:#808479;display:inline-block;}
+.likepic .top span{float:right;padding-top:4px}
+.likepic .box{padding:10px 0 0 0;height:275px}
+.likepic .box li{width:160px;height:120px;display:inline;float:left;margin-right:14px;margin-bottom:14px}
+.likepic .box li.i_0{margin-right:0;}
+.likepic .box li img{width:160px;height:120px;border-radius:5px;padding:2px;border:1px solid #ccc;box-shadow:0 1px 1px #eee;display:block;}
+.likepic .box li img:hover{border:1px solid #808479;box-shadow:0px 1px 1px #808479;display:block;opacity:0.6;filter:alpha(opacity=60);transition:0.4s;}.likepic .photo a{position:absolute;display:block;padding:0}
+.likepic .photo a span{font:12px/26px Arial,serif;width:156px;height:26px;padding:0px 2px;border-radius:2px;text-align:center;left:3px;bottom:3px;color:#fff;background-color:rgba(0,0,0,0.4);text-shadow:1px 1px 0px #000;display:block;position:absolute;overflow:hidden;}
+
+.main-left .comlimi_title h3,.comlimi_notice .comlimi_title h3,#user_login .comlimi_title h3,.member-left .comlimi_title h3,.ranking .comlimi_title h3,.scores .comlimi_title h3,.pic-title h3,.diary-title h3,.link-title h3,.article-left .comlimi_title h3,.article-left .comlimi_title dt,.right-item .comlimi_title h3,.listpic .comlimi_title h3,.huati .comlimi_title h3{float:left;line-height:35px;font-size:18px;border-bottom:2px solid #808479;color:#808479;font-weight:normal;display:inline-block;}
+.main-left .comlimi_title h3 a,.diary-title h3 a,.article-left .comlimi_title h3 a,.listpic .comlimi_title h3 a,.huati.comlimi_title h3 a,.right-item .comlimi_title h3 a,.ranking .comlimi_title h3 a,.pic-title h3 a{color:#808479;}
+
+.article-left .comlimi_title dt h1{line-height:35px;font-size:18px;color:#808479;font-weight:normal;display:inline-block;}
+.category{width:700px;height:331px;margin-top:5px;overflow:hidden;padding-bottom:8px;border-bottom:1px solid #e3efc5;}
+.category .item{width:350px;display:inline;float:left}
+.category .item .top{width:340px;margin:5px;padding:0px;overflow:hidden}
+.category .item .top img{width:120px;height:90px;border:#e3e2d5 1px solid;box-shadow:2px 2px 2px #DDD;border-radius:5%;padding:2px;float:left;margin-right:10px}
+.category .item .top img:hover{opacity:0.6;transition:0.5s;border:1px solid #6EAE41;box-shadow:2px 2px 2px #ABC899;}
+.category .item .top h4{margin:6px 0 8px;width:204px;float:left;height:20px;line-height:20px;font-weight:normal;font-size:16px;overflow:hidden}
+.category .item .top h4 a{color:#808479;height:20px;line-height:20px;display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.category .item .top p{line-height:20px;width:204px;text-align:justify;font-size:14px;font-weight:normal;height:60px;margin:0px;padding:0px;float:left;color:#999;overflow:hidden;_margin-bottom:12px}
+.category .item ul{width:340px;height:225px;margin:0px 5px;padding:0;overflow:hidden}
+.category .item ul li{width:335px;line-height:28px;height:28px;overflow:hidden;}
+.category .item ul li a{font-size:14px;font-weight:normal;}
+.category .item ul li .list{font:400 14px/28px Microsoft Yahei,sans-serif;color:#808479;padding-right:5px;float:left;}
+.category .item ul li .time,.diary-list .box li span.time,.item-box .comlimi_tc li .time{font:12px/28px Georgia,serif;color:#999;padding-left:10px;float:right;}
+
+.ranking,.scores{padding-left:10px;margin:0px}
+.ranking ul{padding:4px 0px 4px 4px;margin:0px;min-height:336px;border-bottom:1px solid #e3efc5;overflow:hidden;}
+.ranking ul li,.right-item .box li{line-height:28px;height:28px;}
+.ranking ul li span,.right-item .box li span{display:block;float:left}
+.ranking ul li span.a,.right-item .box li span.a{margin:6px 5px 5px 0px;width:17px;height:17px;color:#FFF;font:11px/16px Microsoft Yahei,sans-serif;border-radius:3px;white-space:nowrap;text-align:center;display:inline-block;background-color:#757670;}
+.ranking ul li span.b,.right-item .box li span.b{background-color:#F8A214;}
+
+.right-item{margin-bottom:5px;padding-left:5px;}
+.right-item .box{padding:4px 0px 4px 4px;margin:0px;overflow:hidden;}
